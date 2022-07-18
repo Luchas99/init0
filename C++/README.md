@@ -1,6 +1,17 @@
 # init0 C++
 C++:
 
+Compiler:
+g++ file.cpp -o CompiledFileNameOutput
+
++ Compilation Example:
+- Command.- g++ cplus.cpp -o cplus
+- Output.- cplus.out
+
+Run:
+./cplus.out
+
+
 # Wikipedia:
 **Header files:**
 The classes of the input/output library reside in several headers.
