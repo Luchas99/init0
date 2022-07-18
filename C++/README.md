@@ -1,15 +1,9 @@
 # init0 C++
 C++:
-
-Compiler:
-g++ file.cpp -o CompiledFileNameOutput
-
-+ Compilation Example:
-- Command.- g++ cplus.cpp -o cplus
-- Output.- cplus.out
-
-Run:
-./cplus.out
+# Compiler: g++
+- g++ cplus.cpp -o cplus
+# Run:
+./cplus
 
 
 # Wikipedia:
