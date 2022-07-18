@@ -8,7 +8,7 @@ React Native
 ...
 # Goal:
 Start simple and scalable from here.
-+ scratch - dependencies.
+More from scratch less from dependencies.
 
-
+# Notes:
 I am currently using macOS.
