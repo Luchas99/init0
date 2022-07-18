@@ -1,4 +1,4 @@
-# init0: Just where to cook stuff.
+# init0: A place to cook stuff.
 Enviroment Initiation.
 ...
 + C
