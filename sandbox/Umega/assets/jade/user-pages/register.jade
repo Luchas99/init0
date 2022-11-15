@@ -1,0 +1,43 @@
+extends ../template/extra-template.jade
+block title
+  title Umega App - Register
+block main-content
+  body.user-page
+    h1.fw-600.mt-0.mb-20 Umega App
+    form.form-horizontal(method='get', action='index.html')
+      .form-group
+        .col-xs-12
+          input.form-control.rounded(type='text', placeholder='Name')
+      .form-group
+        .col-xs-12
+          input.form-control.rounded(type='text', placeholder='Email')
+      .form-group
+        .col-xs-12
+          input.form-control.rounded(type='password', placeholder='Password')
+      .form-group
+        .col-xs-12
+          input.form-control.rounded(type='password', placeholder='Confirm Password')
+      .form-group
+        .col-xs-12
+          label.checkbox-inline.checkbox-custom
+            input#exampleCheckboxAgree(type='checkbox', value='remember')
+            label(for='exampleCheckboxAgree') Agree the terms and policy
+      button.btn.btn-lg.btn-success.btn-raised.btn-block(type='submit') Sign Up
+    hr
+    p.text-muted Sign Up with your Facebook Or Twitter accounts
+    .clearfix
+      .pull-left
+        button.btn.btn-raised.btn-primary(type='button')
+          i.ti-facebook.mr-5
+          |  Facebook
+      .pull-right
+        button.btn.btn-raised.btn-info(type='button')
+          i.ti-twitter-alt.mr-5
+          |  Twitter
+    hr
+    .form-horizontal
+      .clearfix
+        .pull-left
+          p.form-control-static Already have an account?
+        .pull-right
+          a.btn.btn-outline.btn-default(href='login.html') Sign In

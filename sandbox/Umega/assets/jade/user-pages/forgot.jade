@@ -1,0 +1,14 @@
+extends ../template/extra-template.jade
+block title
+  title Umega App - Forgot Password
+block main-content
+  body.user-page
+    h3.fw-600.mt-0.mb-20 Forgot Password
+    form.form-horizontal(method='get', action='index.html')
+      p.fs-13.text-muted Enter the email address associated with your account to reset your password
+      .form-group.has-feedback
+        .col-xs-12
+          input.form-control.rounded(type='text', aria-describedby='exampleInputEmail', placeholder='Email')
+          span.ti-user.form-control-feedback(aria-hidden='true')
+          span#exampleInputEmail.sr-only (default)
+      button.btn.btn-success.btn-raised.btn-block(type='submit') Reset password

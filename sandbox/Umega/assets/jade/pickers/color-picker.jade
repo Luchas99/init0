@@ -1,0 +1,446 @@
+extends ../template/template.jade
+block css
+  // jQuery MiniColors
+  link(rel='stylesheet', type='text/css', href=plugins+'jquery-minicolors/jquery.minicolors.css')
+  // Bootstrap Color Picker Sliders
+  link(rel='stylesheet', type='text/css', href=plugins+'bootstrap-colorpickersliders/dist/bootstrap.colorpickersliders.min.css')
+block js
+  // jQuery MiniColors
+  script(type='text/javascript', src=plugins+'jquery-minicolors/jquery.minicolors.min.js')
+  // Bootstrap Color Picker Sliders
+  script(type='text/javascript', src=plugins+'bootstrap-colorpickersliders/dist/bootstrap.colorpickersliders.min.js')
+  // TinyColor
+  script(type='text/javascript', src=plugins+'tinycolor/dist/tinycolor-min.js')
+block custom-js
+  script(type='text/javascript', src=build+'js/pages/color-picker.js')
+block title
+  title Umega App - Color Picker
+block navigation
+  ul.list-unstyled.navigation.mb-0
+    li.header Main
+    li
+      a.bubble(href='index.html')
+        i.ti-home
+        |  Dashboard
+        span.badge.bg-danger 3
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse2', aria-expanded='false', aria-controls='collapse2')
+        i.ti-palette
+        |  Skins
+      ul#collapse2.list-unstyled.collapse
+        li
+          a(href='red-skin.html') Red
+        li
+          a(href='green-skin.html') Green
+        li
+          a(href='yellow-skin.html') Yellow
+    li.header Components
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse3', aria-expanded='false', aria-controls='collapse3')
+        i.ti-receipt
+        |  Basic
+      ul#collapse3.list-unstyled.collapse
+        li
+          a(href='buttons.html') Buttons
+        li
+          a(href='carousels.html') Carousels
+        li
+          a(href='containers.html') Containers
+        li
+          a(href='dialogs.html') Dialogs
+        li
+          a(href='basic-inputs.html') Inputs
+        li
+          a(href='navigations.html') Navigations
+        li
+          a(href='progress-bars.html') Progress bars
+        li
+          a(href='typography.html') Typography
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse4', aria-expanded='false', aria-controls='collapse4')
+        i.ti-ruler-pencil
+        |  Editors
+      ul#collapse4.list-unstyled.collapse
+        li
+          a(href='summernote.html') Summernote
+        li
+          a(href='bootstrap-markdown.html') Bootstrap markdown
+        li
+          a(href='code-prettify.html') Code prettify
+        li
+          a(href='ckeditor.html') CKEditor
+    li.panel
+      a.active(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse5', aria-expanded='true', aria-controls='collapse5')
+        i.ti-location-arrow
+        |  Pickers
+      ul#collapse5.list-unstyled.collapse.in
+        li
+          a.active(href='color-picker.html') Color picker
+        li
+          a(href='datetime-picker.html') Datetime picker
+        li
+          a(href='clock-picker.html') Clock picker
+        li
+          a(href='date-range-picker.html') Date range picker
+        li
+          a(href='multi-select.html') Multi select
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse6', aria-expanded='false', aria-controls='collapse6')
+        i.ti-layers-alt
+        |  Forms
+      ul#collapse6.list-unstyled.collapse
+        li
+          a(href='form-layouts.html') Layouts
+        li
+          a(href='jquery-validation.html') Validation
+        li
+          a(href='jquery-steps.html') Wizard
+        li
+          a(href='other-plugins.html') Other plugins
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse7', aria-expanded='false', aria-controls='collapse7')
+        i.ti-face-smile
+        |  Icons
+      ul#collapse7.list-unstyled.collapse
+        li
+          a(href='glyphicons.html') Glyphicons
+        li
+          a(href='font-awesome.html') Font awesome
+        li
+          a(href='material-design.html') Material design
+        li
+          a(href='themify.html') Themify
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse8', aria-expanded='false', aria-controls='collapse8')
+        i.ti-layout-grid2
+        |  Tables
+      ul#collapse8.list-unstyled.collapse
+        li
+          a(href='basic-tables.html') Basic tables
+        li
+          a(href='data-tables.html') Data tables
+        li
+          a(href='pricing-tables.html') Pricing tables
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse9', aria-expanded='false', aria-controls='collapse9')
+        i.ti-control-forward
+        |  Animations
+      ul#collapse9.list-unstyled.collapse
+        li
+          a(href='basic-animations.html') Basic
+        li
+          a(href='loading-animations.html') Loading
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse10', aria-expanded='false', aria-controls='collapse10')
+        i.ti-upload
+        |  File uploads
+      ul#collapse10.list-unstyled.collapse
+        li
+          a(href='dropzone-js.html') Dropzone
+        li
+          a(href='bootstrap-file-input.html') Bootstrap file input
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse11', aria-expanded='false', aria-controls='collapse11')
+        i.ti-info-alt
+        |  Indicators
+      ul#collapse11.list-unstyled.collapse
+        li
+          a(href='toastr.html') Toastr
+        li
+          a(href='sweet-alert.html') Sweet alert
+    li.header Data visualization
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse12', aria-expanded='false', aria-controls='collapse12')
+        i.ti-bar-chart
+        |  Charts
+      ul#collapse12.list-unstyled.collapse
+        li
+          a(href='flot-charts.html') Flot charts
+        li
+          a(href='morris-charts.html') Morris charts
+        li
+          a(href='chart-js.html') Chart.js
+        li
+          a(href='other-charts.html') Other charts
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse13', aria-expanded='false', aria-controls='collapse13')
+        i.ti-location-pin
+        |  Maps
+      ul#collapse13.list-unstyled.collapse
+        li
+          a(href='vector-maps.html') Vector maps
+        li
+          a(href='google-maps.html') Google maps
+    li.header Page kits
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse14', aria-expanded='false', aria-controls='collapse14')
+        i.ti-alert
+        |  Error pages
+      ul#collapse14.list-unstyled.collapse
+        li
+          a(href='400.html') 400 Bad request
+        li
+          a(href='401.html') 401 Unauthorized
+        li
+          a(href='403.html') 403 Forbidden
+        li
+          a(href='404.html') 404 Not found
+        li
+          a(href='500.html') 500 Internal server error
+        li
+          a(href='503.html') 503 Service unavailable
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse15', aria-expanded='false', aria-controls='collapse15')
+        i.ti-user
+        |  User pages
+      ul#collapse15.list-unstyled.collapse
+        li
+          a(href='login.html') Login
+        li
+          a(href='register.html') Registration
+        li
+          a(href='forgot.html') Forgot password
+        li
+          a(href='lock-screen.html') Lock screen
+        li
+          a(href='profile.html') Profile
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse16', aria-expanded='false', aria-controls='collapse16')
+        i.ti-panel
+        |  Apps
+      ul#collapse16.list-unstyled.collapse
+        li
+          a(href='mailbox.html') Mailbox
+        li
+          a(href='calendar.html') Calendar
+        li
+          a(href='image-cropper.html') Image cropper
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse17', aria-expanded='false', aria-controls='collapse17')
+        i.ti-blackboard
+        |  Extra pages
+      ul#collapse17.list-unstyled.collapse
+        li
+          a(href='invoice.html') Invoice
+        li
+          a(href='search-results.html') Search results
+        li
+          a(href='blank-template.html') Blank template
+    li.header Help
+    li
+      a(href='documentation.html')
+        i.ti-help-alt
+        |  Documentation
+    li.header Menu Levels
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse18', aria-expanded='false', aria-controls='collapse18')
+        i.ti-folder
+        |  Menu levels
+      ul#collapse18.list-unstyled.collapse
+        li
+          a(href='#') Menu level 2.1
+        li.panel
+          a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse18', href='#collapse21', aria-expanded='false', aria-controls='collapse21') Menu level 2.2
+          ul#collapse21.list-unstyled.collapse
+            li
+              a(href='#') Menu level 3.1
+            li.panel
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse21', href='#collapse31', aria-expanded='false', aria-controls='collapse31') Menu level 3.2
+              ul#collapse31.list-unstyled.collapse
+                li
+                  a(href='#') Menu level 4.1
+                li.panel
+                  a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse31', href='#collapse41', aria-expanded='false', aria-controls='collapse41') Menu level 4.2
+                  ul#collapse41.list-unstyled.collapse
+                    li
+                      a(href='#') Menu level 5.1
+                    li
+                      a(href='#') Menu level 5.2
+block page-header
+  | Color Picker
+block breadcrumb
+  ol.breadcrumb.mb-0
+    li
+      a(href='#') Umega
+    li
+      a(href='#') Pickers
+    li.active Color Picker
+block main-content
+  .main-content.container-fluid
+    h3.mt-0 jQuery MiniColors
+    .widget
+      .widget-heading
+        h3.widget-title Control Types
+      .widget-body
+        .row
+          .col-md-6
+            .form-group
+              label Hue (default)
+              input#hue-minicolors.form-control(type='text', value='#9b59b6')
+          .col-md-6
+            .form-group
+              label Brightness
+              input#brightness-minicolors.form-control(type='text', value='#2ecc71')
+        .row
+          .col-md-6
+            .form-group
+              label Saturation
+              input#saturation-minicolors.form-control(type='text', value='#3498db')
+          .col-md-6
+            .form-group
+              label Wheel
+              input#wheel-minicolors.form-control(type='text', value='#1abc9c')
+    .widget
+      .widget-heading
+        h3.widget-title Input Modes
+      .widget-body
+        .row
+          .col-md-6
+            .form-group
+              label Text field
+              input#text-minicolors.form-control(type='text', value='#9b59b6')
+            .form-group
+              label Hidden input
+              input#hidden-minicolors(type='hidden', value='#bdc3c7')
+          .col-md-6
+            .form-group
+              label Inline
+              br
+              input#inline-minicolors.form-control(type='text', value='#bdc3c7')
+    .widget
+      .widget-heading
+        h3.widget-title Positions
+      .widget-body
+        .row
+          .col-md-6
+            .form-group
+              label Bottom left
+              input#bottom-left-minicolors.form-control(type='text', value='#3498db')
+          .col-md-6
+            .form-group
+              label Bottom right
+              input#bottom-right-minicolors.form-control(type='text', value='#1abc9c')
+        .row
+          .col-md-6
+            .form-group
+              label Top left
+              input#top-left-minicolors.form-control(type='text', value='#2ecc71')
+          .col-md-6
+            .form-group
+              label Top right
+              input#top-right-minicolors.form-control(type='text', value='#9b59b6')
+    .widget
+      .widget-heading
+        h3.widget-title RGB(A)
+      .widget-body
+        .row
+          .col-md-6
+            .form-group
+              label RGB
+              input#rgb-minicolors.form-control(type='text', value='rgb(155, 89, 182)')
+          .col-md-6
+            .form-group
+              label RGB(A)
+              input#rgba-minicolors.form-control(type='text', value='rgba(22, 160, 133, 0.8)')
+    .widget
+      .widget-heading
+        h3.widget-title …and more!
+      .widget-body
+        .row
+          .col-md-6
+            .form-group
+              label Opacity
+              input#opacity-minicolors.form-control(type='text', value='#9b59b6', data-opacity='0.8')
+          .col-md-6
+            .form-group
+              label Keywords
+              input#keywords-minicolors.form-control(type='text', value='transparent')
+        .row
+          .col-md-6
+            .form-group
+              label Default Value
+              input#default-value-minicolors.form-control(type='text')
+          .col-md-6
+            .form-group
+              label Letter Case
+              input#letter-case-minicolors.form-control(type='text', value='#9b59b6')
+        .row
+          .col-md-6
+            .form-group
+              label Input group
+              .input-group
+                input#input-group-minicolors.form-control(type='text', value='#1abc9c')
+                span.input-group-btn
+                  button.btn.btn-outline.btn-default(type='button') Button
+          .col-md-6
+            .form-group
+              label More Input Groups
+              .input-group
+                span.input-group-addon Color
+                input#more-input-group-minicolors.form-control(type='text', value='#2ecc71')
+                span.input-group-btn
+                  button.btn.btn-outline.btn-default(type='button') Button
+    h3 Bootstrap Color Picker Sliders
+    .widget
+      .widget-heading
+        h3.widget-title HSV Flat
+      .widget-body
+        #hsvflat
+    .widget
+      .widget-heading
+        h3.widget-title Positions
+      .widget-body
+        .row
+          .col-md-6
+            .form-group
+              label Right
+              input#right.form-control(type='text', value='#9b59b6')
+          .col-md-6
+            .form-group
+              label Left
+              input#left.form-control(type='text', value='#2ecc71')
+        .row
+          .col-md-6
+            .form-group
+              label Top
+              input#top.form-control(type='text', value='#1abc9c')
+          .col-md-6
+            .form-group
+              label Bottom
+              input#bottom.form-control(type='text', value='#3498db')  
+    .widget
+      .widget-heading
+        h3.widget-title HSL and CIE Lch
+      .widget-body
+        #hslflat
+    .widget
+      .widget-heading
+        h3.widget-title Different sizes and color sliders
+      .widget-body
+        .row
+          .col-md-6
+            .form-group
+              label Small sized HSL
+              input#small.form-control(type='text', value='#9b59b6')
+          .col-md-6
+            .form-group
+              label Small sized HSV
+              input#smallhsv.form-control(type='text', value='#2ecc71')
+        .row
+          .col-md-6
+            .form-group
+              label Default sized RGB
+              input#default.form-control(type='text', value='#1abc9c')
+          .col-md-6
+            .form-group
+              label Large sized CIE Lch
+              input#large.form-control(type='text', value='rgb(52, 152, 219)')
+        .row
+          .col-md-6
+            .form-group
+              label Swatches only
+              input#swatchesonly.form-control(type='text')
+          .col-md-6
+            .form-group
+              label HSL with opdacity and swatches
+              input#hslswatches.form-control(type='text', value='hsl(180, 50%, 50%)')

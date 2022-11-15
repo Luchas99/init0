@@ -1,0 +1,32 @@
+extends ../template/extra-template.jade
+block js
+  // jQuery
+  script(type='text/javascript', src=plugins+'jquery/dist/jquery.min.js')
+  // jQuery Easy Pie Chart
+  script(type='text/javascript', src=plugins+'jquery.easy-pie-chart/dist/jquery.easypiechart.min.js')
+  // Custom JS
+  script(type='text/javascript', src=build+'js/pages/lock-screen.js')
+block title
+  title Umega App - Lock Screen
+block main-content
+  body.user-page
+    #esp-profile.easy-pie-chart(data-percent='75', style='height: 140px; width: 140px; line-height: 120px; padding: 10px;')
+      img.img-circle(src=build+'images/users/06.jpg', width='100', alt='')
+    h3.fw-600 Steven Cook
+    p Enter your password to retrieve your session.
+    form(method='get', action='index.html')
+      .input-group
+        input.form-control(type='text', placeholder='Enter password')
+        span.input-group-btn
+          button.btn.btn-primary(type='submit')
+            i.ti-unlock
+    ul.list-inline.mt-20.mb-0
+      li
+        a.text-info.fs-20(href='#')
+          i.ti-twitter-alt
+      li
+        a.text-primary.fs-20(href='#')
+          i.ti-facebook
+      li
+        a.text-danger.fs-20(href='#')
+          i.ti-google

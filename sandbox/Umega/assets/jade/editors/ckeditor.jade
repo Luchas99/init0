@@ -1,0 +1,401 @@
+extends ../template/template.jade
+block js
+  // CKEditor
+  script(type='text/javascript', src=plugins+'bootstrapck4-skin/ckeditor.js')
+block custom-js
+  script(type='text/javascript', src=build+'js/pages/ckeditor.js')
+block title
+  title Umega App - CKEditor
+block navigation
+  ul.list-unstyled.navigation.mb-0
+    li.header Main
+    li
+      a.bubble(href='index.html')
+        i.ti-home
+        |  Dashboard
+        span.badge.bg-danger 3
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse2', aria-expanded='false', aria-controls='collapse2')
+        i.ti-palette
+        |  Skins
+      ul#collapse2.list-unstyled.collapse
+        li
+          a(href='red-skin.html') Red
+        li
+          a(href='green-skin.html') Green
+        li
+          a(href='yellow-skin.html') Yellow
+    li.header Components
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse3', aria-expanded='false', aria-controls='collapse3')
+        i.ti-receipt
+        |  Basic
+      ul#collapse3.list-unstyled.collapse
+        li
+          a(href='buttons.html') Buttons
+        li
+          a(href='carousels.html') Carousels
+        li
+          a(href='containers.html') Containers
+        li
+          a(href='dialogs.html') Dialogs
+        li
+          a(href='basic-inputs.html') Inputs
+        li
+          a(href='navigations.html') Navigations
+        li
+          a(href='progress-bars.html') Progress bars
+        li
+          a(href='typography.html') Typography
+    li.panel
+      a.active(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse4', aria-expanded='true', aria-controls='collapse4')
+        i.ti-ruler-pencil
+        |  Editors
+      ul#collapse4.list-unstyled.collapse.in
+        li
+          a(href='summernote.html') Summernote
+        li
+          a(href='bootstrap-markdown.html') Bootstrap markdown
+        li
+          a(href='code-prettify.html') Code prettify
+        li
+          a.active(href='ckeditor.html') CKEditor
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse5', aria-expanded='false', aria-controls='collapse5')
+        i.ti-location-arrow
+        |  Pickers
+      ul#collapse5.list-unstyled.collapse
+        li
+          a(href='color-picker.html') Color picker
+        li
+          a(href='datetime-picker.html') Datetime picker
+        li
+          a(href='clock-picker.html') Clock picker
+        li
+          a(href='date-range-picker.html') Date range picker
+        li
+          a(href='multi-select.html') Multi select
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse6', aria-expanded='false', aria-controls='collapse6')
+        i.ti-layers-alt
+        |  Forms
+      ul#collapse6.list-unstyled.collapse
+        li
+          a(href='form-layouts.html') Layouts
+        li
+          a(href='jquery-validation.html') Validation
+        li
+          a(href='jquery-steps.html') Wizard
+        li
+          a(href='other-plugins.html') Other plugins
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse7', aria-expanded='false', aria-controls='collapse7')
+        i.ti-face-smile
+        |  Icons
+      ul#collapse7.list-unstyled.collapse
+        li
+          a(href='glyphicons.html') Glyphicons
+        li
+          a(href='font-awesome.html') Font awesome
+        li
+          a(href='material-design.html') Material design
+        li
+          a(href='themify.html') Themify
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse8', aria-expanded='false', aria-controls='collapse8')
+        i.ti-layout-grid2
+        |  Tables
+      ul#collapse8.list-unstyled.collapse
+        li
+          a(href='basic-tables.html') Basic tables
+        li
+          a(href='data-tables.html') Data tables
+        li
+          a(href='pricing-tables.html') Pricing tables
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse9', aria-expanded='false', aria-controls='collapse9')
+        i.ti-control-forward
+        |  Animations
+      ul#collapse9.list-unstyled.collapse
+        li
+          a(href='basic-animations.html') Basic
+        li
+          a(href='loading-animations.html') Loading
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse10', aria-expanded='false', aria-controls='collapse10')
+        i.ti-upload
+        |  File uploads
+      ul#collapse10.list-unstyled.collapse
+        li
+          a(href='dropzone-js.html') Dropzone
+        li
+          a(href='bootstrap-file-input.html') Bootstrap file input
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse11', aria-expanded='false', aria-controls='collapse11')
+        i.ti-info-alt
+        |  Indicators
+      ul#collapse11.list-unstyled.collapse
+        li
+          a(href='toastr.html') Toastr
+        li
+          a(href='sweet-alert.html') Sweet alert
+    li.header Data visualization
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse12', aria-expanded='false', aria-controls='collapse12')
+        i.ti-bar-chart
+        |  Charts
+      ul#collapse12.list-unstyled.collapse
+        li
+          a(href='flot-charts.html') Flot charts
+        li
+          a(href='morris-charts.html') Morris charts
+        li
+          a(href='chart-js.html') Chart.js
+        li
+          a(href='other-charts.html') Other charts
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse13', aria-expanded='false', aria-controls='collapse13')
+        i.ti-location-pin
+        |  Maps
+      ul#collapse13.list-unstyled.collapse
+        li
+          a(href='vector-maps.html') Vector maps
+        li
+          a(href='google-maps.html') Google maps
+    li.header Page kits
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse14', aria-expanded='false', aria-controls='collapse14')
+        i.ti-alert
+        |  Error pages
+      ul#collapse14.list-unstyled.collapse
+        li
+          a(href='400.html') 400 Bad request
+        li
+          a(href='401.html') 401 Unauthorized
+        li
+          a(href='403.html') 403 Forbidden
+        li
+          a(href='404.html') 404 Not found
+        li
+          a(href='500.html') 500 Internal server error
+        li
+          a(href='503.html') 503 Service unavailable
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse15', aria-expanded='false', aria-controls='collapse15')
+        i.ti-user
+        |  User pages
+      ul#collapse15.list-unstyled.collapse
+        li
+          a(href='login.html') Login
+        li
+          a(href='register.html') Registration
+        li
+          a(href='forgot.html') Forgot password
+        li
+          a(href='lock-screen.html') Lock screen
+        li
+          a(href='profile.html') Profile
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse16', aria-expanded='false', aria-controls='collapse16')
+        i.ti-panel
+        |  Apps
+      ul#collapse16.list-unstyled.collapse
+        li
+          a(href='mailbox.html') Mailbox
+        li
+          a(href='calendar.html') Calendar
+        li
+          a(href='image-cropper.html') Image cropper
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse17', aria-expanded='false', aria-controls='collapse17')
+        i.ti-blackboard
+        |  Extra pages
+      ul#collapse17.list-unstyled.collapse
+        li
+          a(href='invoice.html') Invoice
+        li
+          a(href='search-results.html') Search results
+        li
+          a(href='blank-template.html') Blank template
+    li.header Help
+    li
+      a(href='documentation.html')
+        i.ti-help-alt
+        |  Documentation
+    li.header Menu Levels
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse18', aria-expanded='false', aria-controls='collapse18')
+        i.ti-folder
+        |  Menu levels
+      ul#collapse18.list-unstyled.collapse
+        li
+          a(href='#') Menu level 2.1
+        li.panel
+          a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse18', href='#collapse21', aria-expanded='false', aria-controls='collapse21') Menu level 2.2
+          ul#collapse21.list-unstyled.collapse
+            li
+              a(href='#') Menu level 3.1
+            li.panel
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse21', href='#collapse31', aria-expanded='false', aria-controls='collapse31') Menu level 3.2
+              ul#collapse31.list-unstyled.collapse
+                li
+                  a(href='#') Menu level 4.1
+                li.panel
+                  a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse31', href='#collapse41', aria-expanded='false', aria-controls='collapse41') Menu level 4.2
+                  ul#collapse41.list-unstyled.collapse
+                    li
+                      a(href='#') Menu level 5.1
+                    li
+                      a(href='#') Menu level 5.2
+block page-header
+  | CKEditor
+block breadcrumb
+  ol.breadcrumb.mb-0
+    li
+      a(href='#') Umega
+    li
+      a(href='#') Editors
+    li.active CKEditor
+block main-content
+  .main-content.container-fluid
+    .row
+      .col-lg-12
+        .widget
+          .widget-heading
+            h3.widget-title Full Toolbar
+          .widget-body
+            textarea#ckeditor-full.
+              &lt;h1&gt;&lt;img alt=&quot;Saturn V carrying Apollo 11&quot; class=&quot;right&quot; src=&quot;http://c.cksource.com/a/1/img/sample.jpg&quot; /&gt; Apollo 11&lt;/h1&gt;
+              &lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spaceflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.&lt;/p&gt;
+              &lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, piloted the &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+              &lt;h2&gt;Broadcasting and &lt;em&gt;quotes&lt;/em&gt; &lt;a id=&quot;quotes&quot; name=&quot;quotes&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+              &lt;p&gt;Broadcast on live TV to a world-wide audience, Armstrong stepped onto the lunar surface and described the event as:&lt;/p&gt;
+              &lt;blockquote&gt;
+              &lt;p&gt;One small step for [a] man, one giant leap for mankind.&lt;/p&gt;
+              &lt;/blockquote&gt;
+              &lt;p&gt;Apollo 11 effectively ended the &lt;a href=&quot;http://en.wikipedia.org/wiki/Space_Race&quot;&gt;Space Race&lt;/a&gt; and fulfilled a national goal proposed in 1961 by the late U.S. President &lt;a href=&quot;http://en.wikipedia.org/wiki/John_F._Kennedy&quot;&gt;John F. Kennedy&lt;/a&gt; in a speech before the United States Congress:&lt;/p&gt;
+              &lt;blockquote&gt;
+              &lt;p&gt;[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.&lt;/p&gt;
+              &lt;/blockquote&gt;
+              &lt;h2&gt;Technical details &lt;a id=&quot;tech-details&quot; name=&quot;tech-details&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+              &lt;table align=&quot;right&quot; border=&quot;1&quot; bordercolor=&quot;#ccc&quot; cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse&quot;&gt;
+                &lt;caption&gt;&lt;strong&gt;Mission crew&lt;/strong&gt;&lt;/caption&gt;
+                &lt;thead&gt;
+                  &lt;tr&gt;
+                    &lt;th scope=&quot;col&quot;&gt;Position&lt;/th&gt;
+                    &lt;th scope=&quot;col&quot;&gt;Astronaut&lt;/th&gt;
+                  &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                  &lt;tr&gt;
+                    &lt;td&gt;Commander&lt;/td&gt;
+                    &lt;td&gt;Neil A. Armstrong&lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr&gt;
+                    &lt;td&gt;Command Module Pilot&lt;/td&gt;
+                    &lt;td&gt;Michael Collins&lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr&gt;
+                    &lt;td&gt;Lunar Module Pilot&lt;/td&gt;
+                    &lt;td&gt;Edwin &amp;quot;Buzz&amp;quot; E. Aldrin, Jr.&lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/tbody&gt;
+              &lt;/table&gt;
+              &lt;p&gt;Launched by a &lt;strong&gt;Saturn V&lt;/strong&gt; rocket from &lt;a href=&quot;http://en.wikipedia.org/wiki/Kennedy_Space_Center&quot;&gt;Kennedy Space Center&lt;/a&gt; in Merritt Island, Florida on July 16, Apollo 11 was the fifth manned mission of &lt;a href=&quot;http://en.wikipedia.org/wiki/NASA&quot;&gt;NASA&lt;/a&gt;&amp;#39;s Apollo program. The Apollo spacecraft had three parts:&lt;/p&gt;
+              &lt;ol&gt;
+                &lt;li&gt;&lt;strong&gt;Command Module&lt;/strong&gt; with a cabin for the three astronauts which was the only part which landed back on Earth&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;Service Module&lt;/strong&gt; which supported the Command Module with propulsion, electrical power, oxygen and water&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;Lunar Module&lt;/strong&gt; for landing on the Moon.&lt;/li&gt;
+              &lt;/ol&gt;
+              &lt;p&gt;After being sent to the Moon by the Saturn V&amp;#39;s upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Mare_Tranquillitatis&quot;&gt;Sea of Tranquility&lt;/a&gt;. They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Pacific_Ocean&quot;&gt;Pacific Ocean&lt;/a&gt; on July 24.&lt;/p&gt;
+              &lt;hr /&gt;
+              &lt;p&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+        .widget
+          .widget-heading
+            h3.widget-title Inline Editing
+          .widget-body
+            #ckeditor-inline(contenteditable='true')
+              h1
+                img.ml-20.pull-right(alt='Saturn V carrying Apollo 11', src='http://c.cksource.com/a/1/img/sample.jpg')
+                |  Apollo 11
+              p
+                strong Apollo 11
+                |  was the spaceflight that landed the first humans, Americans 
+                a(href='http://en.wikipedia.org/wiki/Neil_Armstrong') Neil Armstrong
+                |  and 
+                a(href='http://en.wikipedia.org/wiki/Buzz_Aldrin') Buzz Aldrin
+                | , on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.
+              p
+                | Armstrong spent about 
+                s three and a half
+                |  two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5 kg) of lunar material for return to Earth. A third member of the mission, 
+                a(href='http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)') Michael Collins
+                | , piloted the 
+                a(href='http://en.wikipedia.org/wiki/Apollo_Command/Service_Module') command
+                |  spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.
+              h2
+                | Broadcasting and 
+                em quotes
+                a#quotes(name='quotes')
+              p
+                | Broadcast on live TV to a world-wide audience, Armstrong stepped onto the lunar surface and described the event as:
+              blockquote
+                p One small step for [a] man, one giant leap for mankind.
+              p
+                | Apollo 11 effectively ended the 
+                a(href='http://en.wikipedia.org/wiki/Space_Race') Space Race
+                |  and fulfilled a national goal proposed in 1961 by the late U.S. President 
+                a(href='http://en.wikipedia.org/wiki/John_F._Kennedy') John F. Kennedy
+                |  in a speech before the United States Congress:
+              blockquote
+                p
+                  | [...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.
+              h2
+                | Technical details 
+                a#tech-details(name='tech-details')
+              table.table.table-bordered
+                caption
+                  strong Mission crew
+                thead
+                  tr
+                    th(scope='col') Position
+                    th(scope='col') Astronaut
+                tbody
+                  tr
+                    td Commander
+                    td Neil A. Armstrong
+                  tr
+                    td Command Module Pilot
+                    td Michael Collins
+                  tr
+                    td Lunar Module Pilot
+                    td Edwin "Buzz" E. Aldrin, Jr.
+              p
+                | Launched by a 
+                strong Saturn V
+                |  rocket from 
+                a(href='http://en.wikipedia.org/wiki/Kennedy_Space_Center') Kennedy Space Center
+                |  in Merritt Island, Florida on July 16, Apollo 11 was the fifth manned mission of 
+                a(href='http://en.wikipedia.org/wiki/NASA') NASA
+                | 's Apollo program. The Apollo spacecraft had three parts:
+              ol
+                li
+                  strong Command Module
+                  |  with a cabin for the three astronauts which was the only part which landed back on Earth
+                li
+                  strong Service Module
+                  |  which supported the Command Module with propulsion, electrical power, oxygen and water
+                li
+                  strong Lunar Module
+                  |  for landing on the Moon.
+              p
+                | After being sent to the Moon by the Saturn V's upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the 
+                a(href='http://en.wikipedia.org/wiki/Mare_Tranquillitatis') Sea of Tranquility
+                | . They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the 
+                a(href='http://en.wikipedia.org/wiki/Pacific_Ocean') Pacific Ocean
+                |  on July 24.
+              hr
+              p
+                small
+                  | Source: 
+                  a(href='http://en.wikipedia.org/wiki/Apollo_11') Wikipedia.org

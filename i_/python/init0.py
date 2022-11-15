@@ -1,24 +1,23 @@
-from numpy import true_divide
+inputArray = ["aba", 
+ "aa", 
+ "ad", 
+ "vcd", 
+ "aba"]
 
+print(inputArray)
 
-print("hello")
+max = 0
+newArray = [];
 
-def helloWorld():
-    print("hello world")
+for x in inputArray:
+    if(len(x) > max):
+        max = len(x)
 
-helloWorld()
+for x in inputArray:
+    if(len(x) == max):
+        newArray.append(x)
 
-def isPalindrome(theString):
-    if len(theString) == 0 or len(theString) == 1:
-     return True
-    else:
-        head = theString[0]
-        middle = theString[1:-1]
-        last = theString[-1]
-    return head == last and isPalindrome(middle)
-
-text = 'racecar'
-print(text + " is a palindrome: " + str(isPalindrome(text)))
+print(newArray) 
 
 
 

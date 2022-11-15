@@ -1,0 +1,22 @@
+extends ../template/extra-template.jade
+block title
+  title Umega App - 503 Service Unavailable
+block main-content
+  body.error-page
+    h1.error-code
+      | 5
+      i.ti-face-sad.error-icon
+      | 3
+    h3.error-title Service Unavailable!
+    p.error-sentence The service is not available. Please try again later.
+    a.error-action.btn.btn-lg.btn-outline.btn-rounded.btn-primary(href='index.html', role='button') Go to home page
+    ul.list-inline.mt-20
+      li
+        a.text-info.fs-20(href='#')
+          i.ti-twitter-alt
+      li
+        a.text-primary.fs-20(href='#')
+          i.ti-facebook
+      li
+        a.text-danger.fs-20(href='#')
+          i.ti-google

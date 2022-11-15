@@ -1,0 +1,524 @@
+extends ../template/template.jade
+block js
+  // Code Prettify
+  script(type='text/javascript', src=plugins+'code-prettify/src/run_prettify.js?skin=desert')
+  script(type='text/javascript', src=plugins+'code-prettify/src/lang-css.js')
+  script(type='text/javascript', src=plugins+'code-prettify/src/lang-sql.js')
+  script(type='text/javascript', src=plugins+'code-prettify/src/lang-vb.js')
+block title
+  title Umega App - Code Prettify
+block navigation
+  ul.list-unstyled.navigation.mb-0
+    li.header Main
+    li
+      a.bubble(href='index.html')
+        i.ti-home
+        |  Dashboard
+        span.badge.bg-danger 3
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse2', aria-expanded='false', aria-controls='collapse2')
+        i.ti-palette
+        |  Skins
+      ul#collapse2.list-unstyled.collapse
+        li
+          a(href='red-skin.html') Red
+        li
+          a(href='green-skin.html') Green
+        li
+          a(href='yellow-skin.html') Yellow
+    li.header Components
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse3', aria-expanded='false', aria-controls='collapse3')
+        i.ti-receipt
+        |  Basic
+      ul#collapse3.list-unstyled.collapse
+        li
+          a(href='buttons.html') Buttons
+        li
+          a(href='carousels.html') Carousels
+        li
+          a(href='containers.html') Containers
+        li
+          a(href='dialogs.html') Dialogs
+        li
+          a(href='basic-inputs.html') Inputs
+        li
+          a(href='navigations.html') Navigations
+        li
+          a(href='progress-bars.html') Progress bars
+        li
+          a(href='typography.html') Typography
+    li.panel
+      a.active(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse4', aria-expanded='true', aria-controls='collapse4')
+        i.ti-ruler-pencil
+        |  Editors
+      ul#collapse4.list-unstyled.collapse.in
+        li
+          a(href='summernote.html') Summernote
+        li
+          a(href='bootstrap-markdown.html') Bootstrap markdown
+        li
+          a.active(href='code-prettify.html') Code prettify
+        li
+          a(href='ckeditor.html') CKEditor
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse5', aria-expanded='false', aria-controls='collapse5')
+        i.ti-location-arrow
+        |  Pickers
+      ul#collapse5.list-unstyled.collapse
+        li
+          a(href='color-picker.html') Color picker
+        li
+          a(href='datetime-picker.html') Datetime picker
+        li
+          a(href='clock-picker.html') Clock picker
+        li
+          a(href='date-range-picker.html') Date range picker
+        li
+          a(href='multi-select.html') Multi select
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse6', aria-expanded='false', aria-controls='collapse6')
+        i.ti-layers-alt
+        |  Forms
+      ul#collapse6.list-unstyled.collapse
+        li
+          a(href='form-layouts.html') Layouts
+        li
+          a(href='jquery-validation.html') Validation
+        li
+          a(href='jquery-steps.html') Wizard
+        li
+          a(href='other-plugins.html') Other plugins
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse7', aria-expanded='false', aria-controls='collapse7')
+        i.ti-face-smile
+        |  Icons
+      ul#collapse7.list-unstyled.collapse
+        li
+          a(href='glyphicons.html') Glyphicons
+        li
+          a(href='font-awesome.html') Font awesome
+        li
+          a(href='material-design.html') Material design
+        li
+          a(href='themify.html') Themify
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse8', aria-expanded='false', aria-controls='collapse8')
+        i.ti-layout-grid2
+        |  Tables
+      ul#collapse8.list-unstyled.collapse
+        li
+          a(href='basic-tables.html') Basic tables
+        li
+          a(href='data-tables.html') Data tables
+        li
+          a(href='pricing-tables.html') Pricing tables
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse9', aria-expanded='false', aria-controls='collapse9')
+        i.ti-control-forward
+        |  Animations
+      ul#collapse9.list-unstyled.collapse
+        li
+          a(href='basic-animations.html') Basic
+        li
+          a(href='loading-animations.html') Loading
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse10', aria-expanded='false', aria-controls='collapse10')
+        i.ti-upload
+        |  File uploads
+      ul#collapse10.list-unstyled.collapse
+        li
+          a(href='dropzone-js.html') Dropzone
+        li
+          a(href='bootstrap-file-input.html') Bootstrap file input
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse11', aria-expanded='false', aria-controls='collapse11')
+        i.ti-info-alt
+        |  Indicators
+      ul#collapse11.list-unstyled.collapse
+        li
+          a(href='toastr.html') Toastr
+        li
+          a(href='sweet-alert.html') Sweet alert
+    li.header Data visualization
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse12', aria-expanded='false', aria-controls='collapse12')
+        i.ti-bar-chart
+        |  Charts
+      ul#collapse12.list-unstyled.collapse
+        li
+          a(href='flot-charts.html') Flot charts
+        li
+          a(href='morris-charts.html') Morris charts
+        li
+          a(href='chart-js.html') Chart.js
+        li
+          a(href='other-charts.html') Other charts
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse13', aria-expanded='false', aria-controls='collapse13')
+        i.ti-location-pin
+        |  Maps
+      ul#collapse13.list-unstyled.collapse
+        li
+          a(href='vector-maps.html') Vector maps
+        li
+          a(href='google-maps.html') Google maps
+    li.header Page kits
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse14', aria-expanded='false', aria-controls='collapse14')
+        i.ti-alert
+        |  Error pages
+      ul#collapse14.list-unstyled.collapse
+        li
+          a(href='400.html') 400 Bad request
+        li
+          a(href='401.html') 401 Unauthorized
+        li
+          a(href='403.html') 403 Forbidden
+        li
+          a(href='404.html') 404 Not found
+        li
+          a(href='500.html') 500 Internal server error
+        li
+          a(href='503.html') 503 Service unavailable
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse15', aria-expanded='false', aria-controls='collapse15')
+        i.ti-user
+        |  User pages
+      ul#collapse15.list-unstyled.collapse
+        li
+          a(href='login.html') Login
+        li
+          a(href='register.html') Registration
+        li
+          a(href='forgot.html') Forgot password
+        li
+          a(href='lock-screen.html') Lock screen
+        li
+          a(href='profile.html') Profile
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse16', aria-expanded='false', aria-controls='collapse16')
+        i.ti-panel
+        |  Apps
+      ul#collapse16.list-unstyled.collapse
+        li
+          a(href='mailbox.html') Mailbox
+        li
+          a(href='calendar.html') Calendar
+        li
+          a(href='image-cropper.html') Image cropper
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse17', aria-expanded='false', aria-controls='collapse17')
+        i.ti-blackboard
+        |  Extra pages
+      ul#collapse17.list-unstyled.collapse
+        li
+          a(href='invoice.html') Invoice
+        li
+          a(href='search-results.html') Search results
+        li
+          a(href='blank-template.html') Blank template
+    li.header Help
+    li
+      a(href='documentation.html')
+        i.ti-help-alt
+        |  Documentation
+    li.header Menu Levels
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse18', aria-expanded='false', aria-controls='collapse18')
+        i.ti-folder
+        |  Menu levels
+      ul#collapse18.list-unstyled.collapse
+        li
+          a(href='#') Menu level 2.1
+        li.panel
+          a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse18', href='#collapse21', aria-expanded='false', aria-controls='collapse21') Menu level 2.2
+          ul#collapse21.list-unstyled.collapse
+            li
+              a(href='#') Menu level 3.1
+            li.panel
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse21', href='#collapse31', aria-expanded='false', aria-controls='collapse31') Menu level 3.2
+              ul#collapse31.list-unstyled.collapse
+                li
+                  a(href='#') Menu level 4.1
+                li.panel
+                  a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse31', href='#collapse41', aria-expanded='false', aria-controls='collapse41') Menu level 4.2
+                  ul#collapse41.list-unstyled.collapse
+                    li
+                      a(href='#') Menu level 5.1
+                    li
+                      a(href='#') Menu level 5.2
+block page-header
+  | Code Prettify
+block breadcrumb
+  ol.breadcrumb.mb-0
+    li
+      a(href='#') Umega
+    li
+      a(href='#') Editors
+    li.active Code Prettify
+block main-content
+  .main-content.container-fluid
+    .row
+      .col-md-6
+        .widget
+          .widget-heading
+            h3.widget-title HTML
+          .widget-body
+            pre.prettyprint.lang-html.linenums.
+              &lt;!-- Main Sidebar start--&gt;
+              &lt;aside class=&quot;main-sidebar pinned&quot;&gt;
+              &lt;/aside&gt;
+              &lt;!-- Main Sidebar end--&gt;
+              &lt;!-- Header start--&gt;
+              &lt;header&gt;
+              &lt;/header&gt;
+              &lt;!-- Header end--&gt;
+              &lt;!-- Work Here start--&gt;
+              &lt;section class=&quot;wrapper&quot;&gt;
+                &lt;div class=&quot;page-header clearfix&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;main-content container-fluid&quot;&gt;
+                  &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-lg-12&quot;&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/section&gt;
+              &lt;!-- Work Here end--&gt;
+              &lt;!-- Right Sidebar start--&gt;
+              &lt;aside class=&quot;right-sidebar closed&quot;&gt;
+              &lt;/aside&gt;
+              &lt;aside class=&quot;conversation closed&quot;&gt;
+              &lt;/aside&gt;
+              &lt;!-- Right Sidebar end--&gt;
+              &lt;!-- Demo Settings start--&gt;
+              &lt;div class=&quot;setting closed&quot;&gt;
+              &lt;/div&gt;
+              &lt;!-- Demo Settings end--&gt;
+        .widget
+          .widget-heading
+            h3.widget-title Javascript
+          .widget-body
+            pre.prettyprint.lang-js.linenums.
+              function showPlayer() {
+                // stop the ripples and note animations
+                stopListening();
+
+                // morph the listening button shape 
+                // into the audio player shape
+                // we are setting a timeout so that there's 
+                // a small delay (it looks nicer)
+                setTimeout(function() {
+                  animatePath(shzPathEl, shzEl.getAttribute('data-path-player'), 450, [0.7, 0, 0.3, 1], function() {
+                    // show audio player
+                    classie.remove(playerEl, 'player--hidden');
+                  });
+                  // hide button
+                  classie.add(shzCtrl, 'button--hidden');
+                }, 250);
+                // remove this class so the button content/text gets hidden
+                classie.remove(shzCtrl, 'button--listen');
+              }
+        .widget
+          .widget-heading
+            h3.widget-title Visual Basic
+          .widget-body
+            pre.prettyprint.lang-vb.linenums.
+              Dim studentname As String
+              Dim intMsg As String
+              Private Sub Command1_Click()
+              ‘To read the file 
+              Text1.Text = ""
+              Dim variable1 As String
+              On Error GoTo file_error
+              Open "D:\Liew Folder\sample.txt" For Input As #1
+              Do
+              Input #1, variable1
+              Text1.Text = Text1.Text & variable1 & vbCrLf
+              Loop While Not EOF(1)
+              Close #1
+
+              Exit Sub
+              file_error:
+              MsgBox (Err.Description)
+              End Sub
+
+              Private Sub Command2_Click()
+              ‘To delete the file
+              On Error GoTo delete_error
+              Kill "D:\Liew Folder\sample.txt"
+              Exit Sub
+              delete_error:
+              MsgBox (Err.Description)
+              End Sub - See more at: http://www.vbtutor.net/vb_sample/dbase1.htm#sthash.Y3GuCNk8.dpuf
+        .widget
+          .widget-heading
+            h3.widget-title XML
+          .widget-body
+            pre.prettyprint.lang-xml.linenums.
+              &lt;?xml version=&quot;1.0&quot;?&gt;
+              &lt;CATALOG&gt;
+                &lt;CD&gt;
+                &lt;TITLE&gt;Empire Burlesque&lt;/TITLE&gt;
+                &lt;ARTIST&gt;Bob Dylan&lt;/ARTIST&gt;
+                &lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;
+                &lt;COMPANY&gt;Columbia&lt;/COMPANY&gt;
+                &lt;PRICE&gt;10.90&lt;/PRICE&gt;
+                &lt;YEAR&gt;1985&lt;/YEAR&gt;
+                &lt;ORACLE&gt;
+                select * from scott.dept;
+                &lt;/ORACLE&gt;
+                &lt;/CD&gt;
+                &lt;CD&gt;
+                &lt;TITLE&gt;Hide your heart&lt;/TITLE&gt;
+                &lt;ARTIST&gt;Bonnie Tyler&lt;/ARTIST&gt;
+                &lt;COUNTRY&gt;UK&lt;/COUNTRY&gt;
+                &lt;COMPANY&gt;CBS Records&lt;/COMPANY&gt;
+                &lt;PRICE&gt;9.90&lt;/PRICE&gt;
+                &lt;YEAR&gt;1988&lt;/YEAR&gt;
+                &lt;/CD&gt;
+                &lt;CD&gt;
+                &lt;TITLE&gt;Greatest Hits&lt;/TITLE&gt;
+                &lt;ARTIST&gt;Dolly Parton&lt;/ARTIST&gt;
+                &lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;
+                &lt;COMPANY&gt;RCA&lt;/COMPANY&gt;
+                &lt;PRICE&gt;9.90&lt;/PRICE&gt;
+                &lt;YEAR&gt;1982&lt;/YEAR&gt;
+                &lt;ORACLE&gt;
+                begin
+                htp.p(&#39;This is the test data&#39;);
+                end;
+                &lt;/ORACLE&gt;
+              &lt;/CATALOG&gt;
+      .col-md-6
+        .widget
+          .widget-heading
+            h3.widget-title CSS
+          .widget-body
+            pre.prettyprint.lang-css.linenums.
+              .button-content-start {
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 1.2em;
+                text-indent: 1px;
+                letter-spacing: 1px;
+                -webkit-transform: translate3d(0, -25px, 0);
+                transform: translate3d(0, -25px, 0);
+                -webkit-transition-timing-function: cubic-bezier(0.8, -0.6, 0.2, 1);
+                transition-timing-function: cubic-bezier(0.8, -0.6, 0.2, 1);
+              }
+              .button-content-listen {
+                font-size: 1.75em;
+                line-height: 64px;
+                bottom: 0;
+                left: 50%;
+                width: 60px;
+                height: 60px;
+                margin: 0 0 0 -30px;
+                border-radius: 50%;
+                -webkit-transform: translate3d(0, 25px, 0);
+                transform: translate3d(0, 25px, 0);
+                -webkit-transition-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+                transition-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+              }
+        .widget
+          .widget-heading
+            h3.widget-title Less
+          .widget-body
+            pre.prettyprint.lang-css.linenums.
+              // Customize styles
+              // -------------------------
+
+              .dot {
+                width: @dot-size;
+                height: @dot-size;
+                border-radius: 50%;
+                &:before {
+                  content: "";
+                  position: absolute;
+                  top: -(@scale-dot-size / 2 - @dot-size / 2);
+                  left: -(@scale-dot-size / 2 - @dot-size / 2);
+                  width: @scale-dot-size;
+                  height: @scale-dot-size;
+                  border-radius: 50%;
+                  border-width: 3px;
+                  border-style: solid;
+                  .animation(scaling 2s ease-out infinite);
+                }
+              }
+        .widget
+          .widget-heading
+            h3.widget-title SQL
+          .widget-body
+            pre.prettyprint.lang-sql.linenums.
+              CREATE DATABASE my_db;
+
+              CREATE TABLE Persons (
+                PersonID int,
+                LastName varchar(255),
+                FirstName varchar(255),
+                Address varchar(255),
+                City varchar(255)
+              );
+
+              INSERT INTO Customers (CustomerName, City, Country)
+              VALUES ('Cardinal', 'Stavanger', 'Norway');
+
+              SELECT * FROM Customers
+              WHERE Country='Mexico';
+
+              UPDATE Customers
+              SET ContactName='Alfred Schmidt', City='Hamburg'
+              WHERE CustomerName='Alfreds Futterkiste';
+
+              DELETE FROM Customers
+              WHERE CustomerName='Alfreds Futterkiste'
+              AND ContactName='Maria Anders';
+        .widget
+          .widget-heading
+            h3.widget-title PHP
+          .widget-body
+            pre.prettyprint.lang-php.linenums.
+              &lt;?php
+              /*
+              * T_ML_COMMENT does not exist in PHP 5.
+              * The following three lines define it in order to
+              * preserve backwards compatibility.
+              *
+              * The next two lines define the PHP 5 only T_DOC_COMMENT,
+              * which we will mask as T_ML_COMMENT for PHP 4.
+              */
+              if (!defined(&#39;T_ML_COMMENT&#39;)) {
+                 define(&#39;T_ML_COMMENT&#39;, T_COMMENT);
+              } else {
+                 define(&#39;T_DOC_COMMENT&#39;, T_ML_COMMENT);
+              }
+
+              $source = file_get_contents(&#39;example.php&#39;);
+              $tokens = token_get_all($source);
+
+              foreach ($tokens as $token) {
+                 if (is_string($token)) {
+                     // simple 1-character token
+                     echo $token;
+                 } else {
+                     // token array
+                     list($id, $text) = $token;
+
+                     switch ($id) { 
+                         case T_COMMENT: 
+                         case T_ML_COMMENT: // we&#39;ve defined this
+                         case T_DOC_COMMENT: // and this
+                             // no action on comments
+                             break;
+
+                         default:
+                             // anything else -&gt; output &quot;as is&quot;
+                             echo $text;
+                             break;
+                     }
+                 }
+              }
+              ?&gt;

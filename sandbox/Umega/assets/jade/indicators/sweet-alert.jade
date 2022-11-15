@@ -1,0 +1,414 @@
+extends ../template/template.jade
+block css
+  // Sweet Alert
+  link(rel='stylesheet', type='text/css', href=plugins+'bootstrap-sweetalert/lib/sweet-alert.css')
+block js
+  // Sweet Alert
+  script(type='text/javascript', src=plugins+'bootstrap-sweetalert/lib/sweet-alert.min.js')
+  // Code Prettify
+  script(type='text/javascript', src=plugins+'code-prettify/src/run_prettify.js')
+block custom-js
+  script(type='text/javascript', src=build+'js/pages/sweet-alert.js')
+block title
+  title Umega App - Sweet Alert
+block navigation
+  ul.list-unstyled.navigation.mb-0
+    li.header Main
+    li
+      a.bubble(href='index.html')
+        i.ti-home
+        |  Dashboard
+        span.badge.bg-danger 3
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse2', aria-expanded='false', aria-controls='collapse2')
+        i.ti-palette
+        |  Skins
+      ul#collapse2.list-unstyled.collapse
+        li
+          a(href='red-skin.html') Red
+        li
+          a(href='green-skin.html') Green
+        li
+          a(href='yellow-skin.html') Yellow
+    li.header Components
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse3', aria-expanded='false', aria-controls='collapse3')
+        i.ti-receipt
+        |  Basic
+      ul#collapse3.list-unstyled.collapse
+        li
+          a(href='buttons.html') Buttons
+        li
+          a(href='carousels.html') Carousels
+        li
+          a(href='containers.html') Containers
+        li
+          a(href='dialogs.html') Dialogs
+        li
+          a(href='basic-inputs.html') Inputs
+        li
+          a(href='navigations.html') Navigations
+        li
+          a(href='progress-bars.html') Progress bars
+        li
+          a(href='typography.html') Typography
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse4', aria-expanded='false', aria-controls='collapse4')
+        i.ti-ruler-pencil
+        |  Editors
+      ul#collapse4.list-unstyled.collapse
+        li
+          a(href='summernote.html') Summernote
+        li
+          a(href='bootstrap-markdown.html') Bootstrap markdown
+        li
+          a(href='code-prettify.html') Code prettify
+        li
+          a(href='ckeditor.html') CKEditor
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse5', aria-expanded='false', aria-controls='collapse5')
+        i.ti-location-arrow
+        |  Pickers
+      ul#collapse5.list-unstyled.collapse
+        li
+          a(href='color-picker.html') Color picker
+        li
+          a(href='datetime-picker.html') Datetime picker
+        li
+          a(href='clock-picker.html') Clock picker
+        li
+          a(href='date-range-picker.html') Date range picker
+        li
+          a(href='multi-select.html') Multi select
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse6', aria-expanded='false', aria-controls='collapse6')
+        i.ti-layers-alt
+        |  Forms
+      ul#collapse6.list-unstyled.collapse
+        li
+          a(href='form-layouts.html') Layouts
+        li
+          a(href='jquery-validation.html') Validation
+        li
+          a(href='jquery-steps.html') Wizard
+        li
+          a(href='other-plugins.html') Other plugins
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse7', aria-expanded='false', aria-controls='collapse7')
+        i.ti-face-smile
+        |  Icons
+      ul#collapse7.list-unstyled.collapse
+        li
+          a(href='glyphicons.html') Glyphicons
+        li
+          a(href='font-awesome.html') Font awesome
+        li
+          a(href='material-design.html') Material design
+        li
+          a(href='themify.html') Themify
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse8', aria-expanded='false', aria-controls='collapse8')
+        i.ti-layout-grid2
+        |  Tables
+      ul#collapse8.list-unstyled.collapse
+        li
+          a(href='basic-tables.html') Basic tables
+        li
+          a(href='data-tables.html') Data tables
+        li
+          a(href='pricing-tables.html') Pricing tables
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse9', aria-expanded='false', aria-controls='collapse9')
+        i.ti-control-forward
+        |  Animations
+      ul#collapse9.list-unstyled.collapse
+        li
+          a(href='basic-animations.html') Basic
+        li
+          a(href='loading-animations.html') Loading
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse10', aria-expanded='false', aria-controls='collapse10')
+        i.ti-upload
+        |  File uploads
+      ul#collapse10.list-unstyled.collapse
+        li
+          a(href='dropzone-js.html') Dropzone
+        li
+          a(href='bootstrap-file-input.html') Bootstrap file input
+    li.panel
+      a.active(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse11', aria-expanded='true', aria-controls='collapse11')
+        i.ti-info-alt
+        |  Indicators
+      ul#collapse11.list-unstyled.collapse.in
+        li
+          a(href='toastr.html') Toastr
+        li
+          a.active(href='sweet-alert.html') Sweet alert
+    li.header Data visualization
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse12', aria-expanded='false', aria-controls='collapse12')
+        i.ti-bar-chart
+        |  Charts
+      ul#collapse12.list-unstyled.collapse
+        li
+          a(href='flot-charts.html') Flot charts
+        li
+          a(href='morris-charts.html') Morris charts
+        li
+          a(href='chart-js.html') Chart.js
+        li
+          a(href='other-charts.html') Other charts
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse13', aria-expanded='false', aria-controls='collapse13')
+        i.ti-location-pin
+        |  Maps
+      ul#collapse13.list-unstyled.collapse
+        li
+          a(href='vector-maps.html') Vector maps
+        li
+          a(href='google-maps.html') Google maps
+    li.header Page kits
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse14', aria-expanded='false', aria-controls='collapse14')
+        i.ti-alert
+        |  Error pages
+      ul#collapse14.list-unstyled.collapse
+        li
+          a(href='400.html') 400 Bad request
+        li
+          a(href='401.html') 401 Unauthorized
+        li
+          a(href='403.html') 403 Forbidden
+        li
+          a(href='404.html') 404 Not found
+        li
+          a(href='500.html') 500 Internal server error
+        li
+          a(href='503.html') 503 Service unavailable
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse15', aria-expanded='false', aria-controls='collapse15')
+        i.ti-user
+        |  User pages
+      ul#collapse15.list-unstyled.collapse
+        li
+          a(href='login.html') Login
+        li
+          a(href='register.html') Registration
+        li
+          a(href='forgot.html') Forgot password
+        li
+          a(href='lock-screen.html') Lock screen
+        li
+          a(href='profile.html') Profile
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse16', aria-expanded='false', aria-controls='collapse16')
+        i.ti-panel
+        |  Apps
+      ul#collapse16.list-unstyled.collapse
+        li
+          a(href='mailbox.html') Mailbox
+        li
+          a(href='calendar.html') Calendar
+        li
+          a(href='image-cropper.html') Image cropper
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse17', aria-expanded='false', aria-controls='collapse17')
+        i.ti-blackboard
+        |  Extra pages
+      ul#collapse17.list-unstyled.collapse
+        li
+          a(href='invoice.html') Invoice
+        li
+          a(href='search-results.html') Search results
+        li
+          a(href='blank-template.html') Blank template
+    li.header Help
+    li
+      a(href='documentation.html')
+        i.ti-help-alt
+        |  Documentation
+    li.header Menu Levels
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse18', aria-expanded='false', aria-controls='collapse18')
+        i.ti-folder
+        |  Menu levels
+      ul#collapse18.list-unstyled.collapse
+        li
+          a(href='#') Menu level 2.1
+        li.panel
+          a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse18', href='#collapse21', aria-expanded='false', aria-controls='collapse21') Menu level 2.2
+          ul#collapse21.list-unstyled.collapse
+            li
+              a(href='#') Menu level 3.1
+            li.panel
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse21', href='#collapse31', aria-expanded='false', aria-controls='collapse31') Menu level 3.2
+              ul#collapse31.list-unstyled.collapse
+                li
+                  a(href='#') Menu level 4.1
+                li.panel
+                  a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse31', href='#collapse41', aria-expanded='false', aria-controls='collapse41') Menu level 4.2
+                  ul#collapse41.list-unstyled.collapse
+                    li
+                      a(href='#') Menu level 5.1
+                    li
+                      a(href='#') Menu level 5.2
+block page-header
+  | Sweet Alert
+block breadcrumb
+  ol.breadcrumb.mb-0
+    li
+      a(href='#') Umega
+    li
+      a(href='#') Indicators
+    li.active Sweet Alert
+block main-content
+  .main-content.container-fluid
+    .widget
+      .widget-heading
+        h3.widget-title Alert message
+      .widget-body
+        .row
+          .col-md-6
+            button#sweet-1.btn.btn-raised.btn-black(type='button') Basic
+            pre.mt-20.prettyprint.lang-js.linenums.
+              swal({
+                title: "Here's a message!",
+                confirmButtonClass: "btn-raised btn-primary",
+                confirmButtonText: "OK",
+              })
+          .col-md-6
+            button#sweet-2.btn.btn-raised.btn-black(type='button') Title Text
+            pre.mt-20.prettyprint.lang-js.linenums.
+              swal({
+                title: "Here's a message!",
+                text: "It's pretty, isn't it?",
+                confirmButtonClass: "btn-raised btn-primary",
+                confirmButtonText: "OK",
+              })
+        .row
+          .col-md-6
+            button#sweet-3.btn.btn-raised.btn-success(type='button') Success Message
+            pre.mt-20.prettyprint.lang-js.linenums.
+              swal({
+                title: "Good job!",
+                text: "You clicked the button!",
+                type: "success",
+                confirmButtonClass: "btn-raised btn-success",
+                confirmButtonText: "OK",
+              })
+          .col-md-6
+            button#sweet-4.btn.btn-raised.btn-info(type='button') Info Message
+            pre.mt-20.prettyprint.lang-js.linenums.
+              swal({
+                title: "Good job!",
+                text: "You clicked the button!",
+                type: "info",
+                confirmButtonClass: "btn-raised btn-info",
+                confirmButtonText: "OK",
+              })
+        .row
+          .col-md-6
+            button#sweet-5.btn.btn-raised.btn-warning(type='button') Warning Message
+            pre.mt-20.prettyprint.lang-js.linenums.
+              swal({
+                title: "Good job!",
+                text: "You clicked the button!",
+                type: "warning",
+                confirmButtonClass: "btn-raised btn-warning",
+                confirmButtonText: "OK",
+              })
+          .col-md-6
+            button#sweet-6.btn.btn-raised.btn-danger(type='button') Error Message
+            pre.mt-20.prettyprint.lang-js.linenums.
+              swal({
+                title: "Good job!",
+                text: "You clicked the button!",
+                type: "error",
+                confirmButtonClass: "btn-raised btn-danger",
+                confirmButtonText: "OK",
+              })
+    .widget
+      .widget-heading
+        h3.widget-title Confirm message
+      .widget-body
+        .row
+          .col-md-6
+            button#sweet-7.btn.btn-raised.btn-success(type='button') OK Message
+            pre.mt-20.prettyprint.lang-js.linenums.
+              swal({
+                title: "Are you sure?",
+                text: "Your will not be able to recover this imaginary file!",
+                type: "warning",
+                showCancelButton: true,
+                cancelButtonClass: "btn-raised btn-default",
+                cancelButtonText: "Cancel!",
+                confirmButtonClass: "btn-raised btn-danger",
+                confirmButtonText: "Yes, delete it!",
+                closeOnConfirm: false
+              }, function() {
+                swal({
+                  title: "Deleted!",
+                  text: "Your imaginary file has been deleted.",
+                  type: "success",
+                  confirmButtonClass: "btn-raised btn-success",
+                  confirmButtonText: "OK",
+                })
+              })
+          .col-md-6
+            button#sweet-8.btn.btn-raised.btn-warning(type='button') Cancel Message
+            pre.mt-20.prettyprint.lang-js.linenums.
+              swal({
+                title: "Are you sure?",
+                text: "You will not be able to recover this imaginary file!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-raised btn-danger",
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonClass: 'btn-raised btn-default',
+                cancelButtonText: "No, cancel plx!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+              }, function(isConfirm) {
+                if (isConfirm) {
+                  swal({
+                    title: "Deleted!",
+                    text: "Your imaginary file has been deleted.",
+                    type: "success",
+                    confirmButtonClass: "btn-raised btn-success",
+                    confirmButtonText: "OK",
+                  })
+                } else {
+                  swal({
+                    title: "Cancelled",
+                    text: "Your imaginary file is safe :)",
+                    type: "error",
+                    confirmButtonClass: "btn-raised btn-danger",
+                    confirmButtonText: "OK",
+                  })
+                }
+              })
+    .widget
+      .widget-heading
+        h3.widget-title And more
+      .widget-body
+        .row
+          .col-md-6
+            button#sweet-9.btn.btn-raised.btn-black(type='button') Auto Close
+            pre.mt-20.prettyprint.lang-js.linenums.
+              swal({
+                title: "Auto close alert!",
+                text: "I will close in 2 seconds.",
+                timer: 2000,
+                confirmButtonClass: "btn-raised btn-primary",
+                confirmButtonText: "OK",
+              })
+          .col-md-6
+            button#sweet-10.btn.btn-raised.btn-black(type='button') Custom Icon
+            pre.mt-20.prettyprint.lang-js.linenums.
+              swal({
+                title: "Sweet!",
+                text: "Here's a custom image.",
+                imageUrl: "build/images/icons/01.png",
+                confirmButtonClass: "btn-raised btn-primary",
+                confirmButtonText: "OK",
+              })

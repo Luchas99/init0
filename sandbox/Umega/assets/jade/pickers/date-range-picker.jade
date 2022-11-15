@@ -1,0 +1,459 @@
+extends ../template/template.jade
+block css
+  // Bootstrap Date Range Picker
+  link(rel='stylesheet', type='text/css', href=plugins+'bootstrap-daterangepicker/daterangepicker.css')
+block js
+  // MomentJS
+  script(type='text/javascript', src=plugins+'moment/min/moment.min.js')
+  // Bootstrap Date Range Picker
+  script(type='text/javascript', src=plugins+'bootstrap-daterangepicker/daterangepicker.js')
+block custom-js
+  script(type='text/javascript', src=build+'js/pages/date-range-picker.js')
+block title
+  title Umega App - Date Range Picker
+block navigation
+  ul.list-unstyled.navigation.mb-0
+    li.header Main
+    li
+      a.bubble(href='index.html')
+        i.ti-home
+        |  Dashboard
+        span.badge.bg-danger 3
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse2', aria-expanded='false', aria-controls='collapse2')
+        i.ti-palette
+        |  Skins
+      ul#collapse2.list-unstyled.collapse
+        li
+          a(href='red-skin.html') Red
+        li
+          a(href='green-skin.html') Green
+        li
+          a(href='yellow-skin.html') Yellow
+    li.header Components
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse3', aria-expanded='false', aria-controls='collapse3')
+        i.ti-receipt
+        |  Basic
+      ul#collapse3.list-unstyled.collapse
+        li
+          a(href='buttons.html') Buttons
+        li
+          a(href='carousels.html') Carousels
+        li
+          a(href='containers.html') Containers
+        li
+          a(href='dialogs.html') Dialogs
+        li
+          a(href='basic-inputs.html') Inputs
+        li
+          a(href='navigations.html') Navigations
+        li
+          a(href='progress-bars.html') Progress bars
+        li
+          a(href='typography.html') Typography
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse4', aria-expanded='false', aria-controls='collapse4')
+        i.ti-ruler-pencil
+        |  Editors
+      ul#collapse4.list-unstyled.collapse
+        li
+          a(href='summernote.html') Summernote
+        li
+          a(href='bootstrap-markdown.html') Bootstrap markdown
+        li
+          a(href='code-prettify.html') Code prettify
+        li
+          a(href='ckeditor.html') CKEditor
+    li.panel
+      a.active(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse5', aria-expanded='true', aria-controls='collapse5')
+        i.ti-location-arrow
+        |  Pickers
+      ul#collapse5.list-unstyled.collapse.in
+        li
+          a(href='color-picker.html') Color picker
+        li
+          a(href='datetime-picker.html') Datetime picker
+        li
+          a(href='clock-picker.html') Clock picker
+        li
+          a.active(href='date-range-picker.html') Date range picker
+        li
+          a(href='multi-select.html') Multi select
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse6', aria-expanded='false', aria-controls='collapse6')
+        i.ti-layers-alt
+        |  Forms
+      ul#collapse6.list-unstyled.collapse
+        li
+          a(href='form-layouts.html') Layouts
+        li
+          a(href='jquery-validation.html') Validation
+        li
+          a(href='jquery-steps.html') Wizard
+        li
+          a(href='other-plugins.html') Other plugins
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse7', aria-expanded='false', aria-controls='collapse7')
+        i.ti-face-smile
+        |  Icons
+      ul#collapse7.list-unstyled.collapse
+        li
+          a(href='glyphicons.html') Glyphicons
+        li
+          a(href='font-awesome.html') Font awesome
+        li
+          a(href='material-design.html') Material design
+        li
+          a(href='themify.html') Themify
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse8', aria-expanded='false', aria-controls='collapse8')
+        i.ti-layout-grid2
+        |  Tables
+      ul#collapse8.list-unstyled.collapse
+        li
+          a(href='basic-tables.html') Basic tables
+        li
+          a(href='data-tables.html') Data tables
+        li
+          a(href='pricing-tables.html') Pricing tables
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse9', aria-expanded='false', aria-controls='collapse9')
+        i.ti-control-forward
+        |  Animations
+      ul#collapse9.list-unstyled.collapse
+        li
+          a(href='basic-animations.html') Basic
+        li
+          a(href='loading-animations.html') Loading
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse10', aria-expanded='false', aria-controls='collapse10')
+        i.ti-upload
+        |  File uploads
+      ul#collapse10.list-unstyled.collapse
+        li
+          a(href='dropzone-js.html') Dropzone
+        li
+          a(href='bootstrap-file-input.html') Bootstrap file input
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse11', aria-expanded='false', aria-controls='collapse11')
+        i.ti-info-alt
+        |  Indicators
+      ul#collapse11.list-unstyled.collapse
+        li
+          a(href='toastr.html') Toastr
+        li
+          a(href='sweet-alert.html') Sweet alert
+    li.header Data visualization
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse12', aria-expanded='false', aria-controls='collapse12')
+        i.ti-bar-chart
+        |  Charts
+      ul#collapse12.list-unstyled.collapse
+        li
+          a(href='flot-charts.html') Flot charts
+        li
+          a(href='morris-charts.html') Morris charts
+        li
+          a(href='chart-js.html') Chart.js
+        li
+          a(href='other-charts.html') Other charts
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse13', aria-expanded='false', aria-controls='collapse13')
+        i.ti-location-pin
+        |  Maps
+      ul#collapse13.list-unstyled.collapse
+        li
+          a(href='vector-maps.html') Vector maps
+        li
+          a(href='google-maps.html') Google maps
+    li.header Page kits
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse14', aria-expanded='false', aria-controls='collapse14')
+        i.ti-alert
+        |  Error pages
+      ul#collapse14.list-unstyled.collapse
+        li
+          a(href='400.html') 400 Bad request
+        li
+          a(href='401.html') 401 Unauthorized
+        li
+          a(href='403.html') 403 Forbidden
+        li
+          a(href='404.html') 404 Not found
+        li
+          a(href='500.html') 500 Internal server error
+        li
+          a(href='503.html') 503 Service unavailable
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse15', aria-expanded='false', aria-controls='collapse15')
+        i.ti-user
+        |  User pages
+      ul#collapse15.list-unstyled.collapse
+        li
+          a(href='login.html') Login
+        li
+          a(href='register.html') Registration
+        li
+          a(href='forgot.html') Forgot password
+        li
+          a(href='lock-screen.html') Lock screen
+        li
+          a(href='profile.html') Profile
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse16', aria-expanded='false', aria-controls='collapse16')
+        i.ti-panel
+        |  Apps
+      ul#collapse16.list-unstyled.collapse
+        li
+          a(href='mailbox.html') Mailbox
+        li
+          a(href='calendar.html') Calendar
+        li
+          a(href='image-cropper.html') Image cropper
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse17', aria-expanded='false', aria-controls='collapse17')
+        i.ti-blackboard
+        |  Extra pages
+      ul#collapse17.list-unstyled.collapse
+        li
+          a(href='invoice.html') Invoice
+        li
+          a(href='search-results.html') Search results
+        li
+          a(href='blank-template.html') Blank template
+    li.header Help
+    li
+      a(href='documentation.html')
+        i.ti-help-alt
+        |  Documentation
+    li.header Menu Levels
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse18', aria-expanded='false', aria-controls='collapse18')
+        i.ti-folder
+        |  Menu levels
+      ul#collapse18.list-unstyled.collapse
+        li
+          a(href='#') Menu level 2.1
+        li.panel
+          a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse18', href='#collapse21', aria-expanded='false', aria-controls='collapse21') Menu level 2.2
+          ul#collapse21.list-unstyled.collapse
+            li
+              a(href='#') Menu level 3.1
+            li.panel
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse21', href='#collapse31', aria-expanded='false', aria-controls='collapse31') Menu level 3.2
+              ul#collapse31.list-unstyled.collapse
+                li
+                  a(href='#') Menu level 4.1
+                li.panel
+                  a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse31', href='#collapse41', aria-expanded='false', aria-controls='collapse41') Menu level 4.2
+                  ul#collapse41.list-unstyled.collapse
+                    li
+                      a(href='#') Menu level 5.1
+                    li
+                      a(href='#') Menu level 5.2
+block page-header
+  | Date Range Picker
+block breadcrumb
+  ol.breadcrumb.mb-0
+    li
+      a(href='#') Umega
+    li
+      a(href='#') Pickers
+    li.active Date Range Picker
+block main-content
+  .main-content.container-fluid
+    h3.mt-0 Examples
+    .widget
+      .widget-heading
+        h3.widget-title Control Types
+      .widget-body
+        .row
+          .col-md-6
+            .form-group
+              label Date range picker
+              input#date-range-picker.form-control(type='text', value='01/01/2015 - 02/15/2015')
+          .col-md-6
+            .form-group
+              label Date and time
+              input#date-time-picker.form-control(type='text', value='01/01/2015 1:30 PM - 01/01/2015 2:00 PM')
+        .row
+          .col-md-6
+            .form-group
+              label Single date picker
+              input#single-date-picker.form-control(type='text', value='01/01/2015 - 02/15/2015')
+          .col-md-6
+            .form-group
+              label Predefined ranges
+              .btn-toolbar
+                button#predefined-ranges-picker.btn.btn-raised.btn-black(type='button')
+                  i.ti-calendar 
+                  span
+    .widget
+      .widget-heading
+        h3.widget-title Input Modes
+      .widget-body
+        .row
+          .col-md-6
+            .form-group
+              label With icon
+              .input-group
+                input#with-icon-picker.form-control(type='text', value='01/01/2015 - 02/15/2015')
+                span.input-group-addon
+                  span.ti-calendar
+          .col-md-6
+            .form-group
+              label No icon
+              input#no-icon-picker.form-control(type='text', value='01/01/2015 - 02/15/2015')
+    .widget
+      .widget-heading
+        h3.widget-title Positions
+      .widget-body
+        .row
+          .col-md-6
+            .form-group
+              label Bottom right
+              input#bottom-right-picker.form-control(type='text', value='01/01/2015 - 02/15/2015')
+          .col-md-6
+            .form-group
+              label Bottom left
+              input#bottom-left-picker.form-control(type='text', value='01/01/2015 - 02/15/2015')
+        .row
+          .col-md-6
+            .form-group
+              label Bottom center
+              input#bottom-center-picker.form-control(type='text', value='01/01/2015 - 02/15/2015')
+          .col-md-6
+            .form-group
+              label Top center
+              input#top-center-picker.form-control(type='text', value='01/01/2015 - 02/15/2015')
+        .row
+          .col-md-6
+            .form-group
+              label Top right
+              input#top-right-picker.form-control(type='text', value='01/01/2015 - 02/15/2015')
+          .col-md-6
+            .form-group
+              label Top left
+              input#top-left-picker.form-control(type='text', value='01/01/2015 - 02/15/2015')
+    .widget
+      .widget-heading
+        h3.widget-title …and more!
+      .widget-body
+        .row
+          .col-md-6
+            .form-group
+              label Input initially empty
+              input#input-initially-empty-picker.form-control(type='text')
+          .col-md-6
+            .form-group
+              label Auto apply
+              input#auto-apply-picker.form-control(type='text')
+        .row
+          .col-md-6
+            .form-group
+              label Show week numbers
+              input#show-week-number-picker.form-control(type='text')
+          .col-md-6
+            .form-group
+              label Custom button
+              input#custom-button-picker.form-control(type='text')
+    h3 Configuration Generator
+    .row
+      .col-md-4.demo
+        .form-group
+          label Your Date Range Picker
+          .input-group
+            input#config-demo.form-control(type='text')
+            span.input-group-addon
+              span.ti-calendar
+      .col-md-8
+        .form-group
+          label Configuration
+          textarea#config-text.form-control(style='height: 300px; width: 100%; padding: 10px')
+    .configurator
+      form
+        .row
+          .col-md-4
+            .form-group
+              label(for='parentEl') parentEl
+              input#parentEl.form-control(type='text', value='', placeholder='body')
+            .form-group
+              label(for='startDate') startDate
+              input#startDate.form-control(type='text', value='07/01/2015')
+            .form-group
+              label(for='endDate') endDate
+              input#endDate.form-control(type='text', value='07/15/2015')
+            .form-group
+              label(for='minDate') minDate
+              input#minDate.form-control(type='text', value='', placeholder='MM/DD/YYYY')
+            .form-group
+              label(for='maxDate') maxDate
+              input#maxDate.form-control(type='text', value='', placeholder='MM/DD/YYYY')
+          .col-md-4
+            .checkbox-custom
+              input#autoApply(type='checkbox')
+              label(for='autoApply') autoApply
+            .checkbox-custom
+              input#singleDatePicker(type='checkbox')
+              label(for='singleDatePicker') singleDatePicker
+            .checkbox-custom
+              input#showDropdowns(type='checkbox')
+              label(for='showDropdowns') showDropdowns
+            .checkbox-custom
+              input#showWeekNumbers(type='checkbox')
+              label(for='showWeekNumbers') showWeekNumbers
+            .checkbox-custom
+              input#showISOWeekNumbers(type='checkbox')
+              label(for='showISOWeekNumbers') showISOWeekNumbers
+            .checkbox-custom
+              input#timePicker(type='checkbox')
+              label(for='timePicker') timePicker
+            .checkbox-custom
+              input#timePicker24Hour(type='checkbox')
+              label(for='timePicker24Hour') timePicker24Hour
+            .form-group
+              label(for='timePickerIncrement') timePickerIncrement (in minutes)
+              input#timePickerIncrement.form-control(type='text', value='1')
+            .checkbox-custom
+              input#timePickerSeconds(type='checkbox')
+              label(for='timePickerSeconds') timePickerSeconds
+            .checkbox-custom
+              input#dateLimit(type='checkbox')
+              label(for='dateLimit') dateLimit (with example date range span)
+            .checkbox-custom
+              input#ranges(type='checkbox')
+              label(for='ranges') ranges (with example predefined ranges)
+            .checkbox-custom
+              input#locale(type='checkbox')
+              label(for='locale') locale (with example settings)
+            .checkbox-custom
+              input#linkedCalendars(type='checkbox', checked='checked')
+              label(for='linkedCalendars') linkedCalendars
+            .checkbox-custom
+              input#autoUpdateInput(type='checkbox', checked='checked')
+              label(for='autoUpdateInput') autoUpdateInput
+            .checkbox-custom
+              input#alwaysShowCalendars(type='checkbox')
+              label(for='alwaysShowCalendars') alwaysShowCalendars
+          .col-md-4
+            .form-group
+              label(for='opens') opens
+              select#opens.form-control
+                option(value='right', selected='') right
+                option(value='left') left
+                option(value='center') center
+            .form-group
+              label(for='drops') drops
+              select#drops.form-control
+                option(value='down', selected='') down
+                option(value='up') up
+            .form-group
+              label(for='buttonClasses') buttonClasses
+              input#buttonClasses.form-control(type='text', value='btn btn-sm')
+            .form-group
+              label(for='applyClass') applyClass
+              input#applyClass.form-control(type='text', value='btn-success')
+            .form-group
+              label(for='cancelClass') cancelClass
+              input#cancelClass.form-control(type='text', value='btn-default')

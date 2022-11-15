@@ -1,0 +1,22 @@
+extends ../template/extra-template.jade
+block title
+  title Umega App - 404 Not Found
+block main-content
+  body.error-page
+    h1.error-code
+      | 4
+      i.ti-face-sad.error-icon
+      | 4
+    h3.error-title Page not found!
+    p.error-sentence Sorry! the page you are looking for doesn't exist.
+    a.error-action.btn.btn-lg.btn-outline.btn-rounded.btn-primary(href='index.html', role='button') Go to home page
+    ul.list-inline.mt-20
+      li
+        a.text-info.fs-20(href='#')
+          i.ti-twitter-alt
+      li
+        a.text-primary.fs-20(href='#')
+          i.ti-facebook
+      li
+        a.text-danger.fs-20(href='#')
+          i.ti-google

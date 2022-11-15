@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OrgBoat - Jobs</title>
+    <!-- PACE-->
+    <link rel="stylesheet" type="text/css" href="plugins/PACE/themes/blue/pace-theme-flash.css">
+    <script type="text/javascript" src="plugins/PACE/pace.min.js"></script>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Fonts-->
+    <link rel="stylesheet" type="text/css" href="plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="plugins/font-awesome/css/font-awesome.min.css">
+    <!-- Malihu Scrollbar-->
+    <link rel="stylesheet" type="text/css" href="plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
+    <!-- Animo.js-->
+    <link rel="stylesheet" type="text/css" href="plugins/animo.js/animate-animo.min.css">
+    <!-- Bootstrap Progressbar-->
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
+    <!-- Summernote-->
+    <link rel="stylesheet" type="text/css" href="plugins/summernote/dist/summernote.css">
+    <!-- Bootstrap Date Range Picker-->
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- Primary Style-->
+    <link rel="stylesheet" type="text/css" href="build/css/umega.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://--> 
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script type="text/javascript" src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Main Sidebar start-->
+    <aside class="main-sidebar pinned">
+      <div class="brand"><a href="index.html" class="logo">
+          <h2>Org<span>Boat</span></h2></a><a href="javascript:;" role="button" class="sidebar-toggle visible-xs-block"><i class="ti-close text-white"></i></a></div>
+      <div class="profile"><img src="build/images/users/04.jpg" alt="" class="avatar img-circle"><span class="status bg-success"></span>
+        <h5 class="text-white mb-5">Matthew Gonzalez</h5>
+        <div class="text-muted">Designer</div>
+      </div>
+      <!-- Nav tabs-->
+      <ul role="tablist" class="nav nav-tabs nav-justified nav-sidebar">
+        <li role="presentation" class="active"><a href="#menu" aria-controls="menu" role="tab" data-toggle="tab"><i class="ti-menu"></i></a></li>
+        <li role="presentation"><a href="#portfolio" aria-controls="portfolio" role="tab" data-toggle="tab"><i class="fa fa-star-half-o"></i></a></li>
+        <li role="presentation" class="bubble"><a href="#email" aria-controls="email" role="tab" data-toggle="tab"><i class="ti-email"><span class="dot bg-danger"></span></i></a></li>
+        <li role="presentation"><a href="#setting" aria-controls="setting" role="tab" data-toggle="tab"><i class="fa fa-building"></i></a></li>
+      </ul>
+      <!-- Tab panes-->
+      <div class="tab-content nav-sidebar-content">
+        <div id="menu" role="tabpanel" class="tab-pane fade in active">
+          <ul class="list-unstyled navigation mb-0">
+            <li class="header">Main</li>
+            <li><a href="index.html" class="bubble"><i class="ti-home"></i> Profile</a></li>
+          
+          
+            <li class="header">World</li>
+            <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse3" aria-expanded="true" aria-controls="collapse3" class="active"><i class="ti-receipt"></i> Jobs</a>
+              <ul id="collapse3" class="list-unstyled collapse in">
+                <li><a href="buttons.html">Find Jobs</a></li>
+                <li><a href="carousels.html">Applied To</a></li>
+              </ul>
+            </li>
+            <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse4" aria-expanded="false" aria-controls="collapse4" class="collapsed"><i class="ti-ruler-pencil"></i> Organizations</a>
+              <ul id="collapse4" class="list-unstyled collapse">
+                <li><a href="summernote.html">Orgs Listing</a></li>
+                <li><a href="bootstrap-markdown.html">Favorites</a></li>
+              </ul>
+            </li>
+           
+        
+       
+        </div>
+        <div id="portfolio" role="tabpanel" class="tab-pane fade">
+          <div class="header">Rating</div>
+          <div class="rating clearfix">
+            <div class="pull-left score bg-black fs-24 fw-600 text-center">4.2</div>
+            <div class="pull-left">
+              <div class="progress">
+                <div role="progressbar" data-transitiongoal="100" class="progress-bar five-star"></div>
+              </div>
+              <div class="progress">
+                <div role="progressbar" data-transitiongoal="80" class="progress-bar four-star"></div>
+              </div>
+              <div class="progress">
+                <div role="progressbar" data-transitiongoal="10" class="progress-bar three-star"></div>
+              </div>
+              <div class="progress">
+                <div role="progressbar" data-transitiongoal="25" class="progress-bar two-star"></div>
+              </div>
+              <div class="progress">
+                <div role="progressbar" data-transitiongoal="5" class="progress-bar one-star"></div>
+              </div>
+            </div>
+          </div>
+          <p class="text-center fs-12 mt-5 mb-0">average based on 1,056 ratings</p>
+      
+        </div>
+        <div id="email" role="tabpanel" class="tab-pane fade">
+          <button type="button" data-toggle="modal" data-target=".compose-mail-modal" class="btn btn-raised btn-block btn-danger mt-10"><i class="ti-pencil-alt"></i> Compose Mail</button>
+          <ul class="list-unstyled navigation mb-0">
+            <li class="header">Email</li>
+            <li><a href="mailbox.html" class="bubble"><i class="ti-archive"></i> Inbox<span class="badge bg-danger">5</span></a></li>
+            <li><a href="mailbox.html"><i class="ti-location-arrow"></i> Sent</a></li>
+            <li><a href="mailbox.html"><i class="ti-notepad"></i> Draft</a></li>
+            <li><a href="mailbox.html"><i class="ti-trash"></i> Trash</a></li>
+            <li><a href="mailbox.html"><i class="ti-flag-alt"></i> Important</a></li>
+            <li><a href="mailbox.html"><i class="ti-star"></i> Starred</a></li>
+            <li class="header">Folders</li>
+            <li><a href="#"><i class="ti-folder"></i> Newsletter</a></li>
+            <li><a href="#"><i class="ti-folder"></i> Friend</a></li>
+            <li><a href="#"><i class="ti-folder"></i> Company</a></li>
+            <li><a href="#"><i class="ti-folder"></i> Downloaded</a></li>
+          </ul>
+        </div>
+        <div id="setting" role="tabpanel" class="tab-pane fade">
+          <div class="header">Active Organizations</div>
+          <form class="form-horizontal">
+            <div class="clearfix">
+              <h6 class="pull-left fs-13">Neurons Art & Technology</h6>
+              <div class="switch pull-right">
+                <input id="setting-1" type="checkbox" checked="">
+                <label for="setting-1" class="switch-success"></label>
+              </div>
+            </div>
+            <p class="fs-12">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <div class="clearfix">
+              <h6 class="pull-left fs-13">Devsinc</h6>
+              <div class="switch pull-right">
+                <input id="setting-2" type="checkbox" checked="">
+                <label for="setting-2" class="switch-success"></label>
+              </div>
+            </div>
+            <p class="fs-12">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <div class="clearfix">
+              <h6 class="pull-left fs-13">Flaunt</h6>
+              <div class="switch pull-right">
+                <input id="setting-3" type="checkbox" checked="">
+                <label for="setting-3" class="switch-success"></label>
+              </div>
+            </div>
+            <p class="fs-12">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <div class="clearfix">
+              <h6 class="pull-left fs-13">TRG</h6>
+              <div class="switch pull-right">
+                <input id="setting-4" type="checkbox" checked="">
+                <label for="setting-4" class="switch-success"></label>
+              </div>
+            </div>
+            <p class="fs-12">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <div class="clearfix">
+              <h6 class="pull-left fs-13">The Juliet Blog</h6>
+              <div class="switch pull-right">
+                <input id="setting-5" type="checkbox" checked="">
+                <label for="setting-5" class="switch-success"></label>
+              </div>
+            </div>
+            <p class="fs-12">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          </form>
+        </div>
+      </div>
+    </aside>
+    <!-- Main Sidebar end-->
+    <!-- Header start-->
+    <header>
+      <div class="search-bar closed">
+        <form>
+          <div class="input-group input-group-lg">
+            <input type="text" placeholder="Search for..." class="form-control"><span class="input-group-btn">
+              <button type="button" class="btn btn-default search-bar-toggle"><i class="ti-close"></i></button></span>
+          </div>
+        </form>
+      </div>
+      <div class="brand pull-left"></div><a href="javascript:;" role="button" class="sidebar-toggle pull-left icon"><i class="ti-menu text-muted"></i></a>
+      <form class="mt-15 mb-15 pull-left hidden-xs hidden-sm">
+        <div class="form-group has-feedback mb-0">
+          <input type="text" aria-describedby="inputSearchFor" placeholder="Search for a job..." class="form-control rounded"><span aria-hidden="true" class="ti-search form-control-feedback"></span><span id="inputSearchFor" class="sr-only">(default)</span>
+        </div>
+      </form>
+      
+      <ul class="notification-bar list-inline pull-right">
+        <li class="visible-xs visible-sm"><a href="javascript:;" role="button" class="icon search-bar-toggle"><i class="ti-search text-muted"></i></a></li>
+       
+        <li class="dropdown"><a id="dropdownMenu2" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle bubble icon"><i class="ti-world text-muted"></i><span class="badge bg-danger">4</span></a>
+          <div aria-labelledby="dropdownMenu2" class="dropdown-menu dropdown-menu-right dm-medium fs-12 animated fadeInDown">
+            <h5 class="dropdown-header">You have 4 notifications</h5>
+            <ul class="media-list">
+              <li class="media"><a href="javascript:;">
+                  <div class="media-left avatar"><img src="build/images/users/02.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+                  <div class="media-body">
+                    <h6 class="media-heading">Mark Barnett</h6>
+                    <p class="text-muted mb-0">Sent you a new message</p>
+                  </div>
+                  <div class="media-right text-nowrap">
+                    <time datetime="2015-12-10T20:50:48+07:00" class="fs-11">9 mins</time>
+                  </div></a></li>
+              <li class="media"><a href="javascript:;">
+                  <div class="media-left avatar"><img src="build/images/users/11.jpg" alt="" class="media-object img-circle"><span class="status bg-danger"></span></div>
+                  <div class="media-body">
+                    <h6 class="media-heading">Alexander Gilbert</h6>
+                    <p class="text-muted mb-0">Sent you a new email</p>
+                  </div>
+                  <div class="media-right text-nowrap">
+                    <time datetime="2015-12-10T20:42:40+07:00" class="fs-11">15 mins</time>
+                  </div></a></li>
+              <li class="media"><a href="javascript:;">
+                  <div class="media-left avatar"><img src="build/images/users/12.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+                  <div class="media-body">
+                    <h6 class="media-heading">Amanda Collins</h6>
+                    <p class="text-muted mb-0">You have 8 unread messages</p>
+                  </div>
+                  <div class="media-right text-nowrap">
+                    <time datetime="2015-12-10T20:35:35+07:00" class="fs-11">22 mins</time>
+                  </div></a></li>
+              <li class="media"><a href="javascript:;">
+                  <div class="media-left avatar"><img src="build/images/users/13.jpg" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
+                  <div class="media-body">
+                    <h6 class="media-heading">Christian Lane</h6>
+                    <p class="text-muted mb-0">Commented on your post</p>
+                  </div>
+                  <div class="media-right text-nowrap">
+                    <time datetime="2015-12-10T20:27:48+07:00" class="fs-11">30 mins</time>
+                  </div></a></li>
+            </ul>
+            <div class="dropdown-footer text-center p-10"><a href="javascript:;" class="fw-500 text-muted">See all notifications</a></div>
+          </div>
+        </li>
+        <li><a href="javascript:;" role="button" class="right-sidebar-toggle bubble icon"><i class="ti-comment-alt text-muted"></i><span class="dot bg-danger"></span></a></li>
+        <li><a href="login.html" role="button" class="icon"><i class="ti-power-off text-muted"></i></a></li>
+      </ul>
+    </header>
+    <!-- Header end-->
+    <!-- Work Here start-->
+    <section class="wrapper">
+      <div class="page-header clearfix">
+        <div class="pull-left">
+          <h4 class="mt-0 mb-5">Profile</h4>
+         
+        </div>
+		 <div align="center"><a href="#" style="display: inline-block; border-radius: 50%; padding: 3px; background-color: #fff;"><img src="build/images/users/06.jpg" width="69" alt="" class="img-circle"></a></div>
+	  <div class="row">
+			
+		         <div class="col-md-3" style="width:100%; margin-bottom:-55px;  margin-top:5px;">
+
+		               <table class="table" style="white-space: nowrap; width:100%;">
+						   <tr>
+		                 <td style="padding: 7px 0;" align="center">
+		                   <i class="ti-briefcase text-info"></i>
+		                   <div class="media-body">
+		                     <p>Matthew Gonzales</p>
+		                   </div>
+		                 </td>
+		                 <td style="padding: 7px 0;" align="center">
+		                 <i class="ti-gift text-info"></i>
+		                   <div class="media-body">
+		                     <p>15 September 1993</p>
+		                   </div>
+		                 </td>
+		          <td style="padding: 7px 0; position:relative; top:-3px;" align="center">
+		          <i class="ti-email text-info"></i>
+		          <div class="media-body">
+		          <button type="button" data-toggle="modal" data-target=".compose-mail-modal" class="btn2">Contact</button>
+		          </div>
+		          </td>
+		                 <td style="padding: 7px 0;" align="center">
+		                   <i class="ti-home text-info"></i>
+		                   <div class="media-body">
+		                     <p>4270 Cottage Hill Road</p>
+		                   </div>
+		                 </td>
+		       </tr>
+		               </table>
+		          
+			   </div>
+		   </div>
+      </div>
+      <div class="main-content container-fluid">
+		  
+		 
+        <div class="row">
+          <div class="col-md-5" style="width: 100%;">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Job Categories</h3>
+		        <div style="float:right; position:relative; top:-25px;">
+        <button type="button" data-toggle="modal" data-target=".jobCategoriesModal" class="btn btn-outline btn-success">Edit</button>
+		        </div>
+              </div>
+              <div class="panel-body">
+                <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>Sub Category</th>
+                    <th>Experience</th>
+              
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                  
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+         
+          </div>
+        </div>
+		
+         
+          
+		
+        <div class="row">
+          
+          <div class="col-md-4" style="width: 100%;">
+            <div class="widget" >
+              <div class="widget-heading" style="border-color:#1290ce;">
+                <h3 class="widget-title">Skills</h3>
+				        <div style="float:right; position:relative; top:-25px;">
+		        <button type="button" data-toggle="modal" data-target=".skillsModal" class="btn btn-outline btn-success">Edit</button>
+				        </div>
+              </div>
+              <div class="widget-body">
+                <ul class="list-group">
+                  <li class="list-group-item"><span class="badge bg-warning">4</span>Cras justo odio</li>
+                  <li class="list-group-item"><span class="badge bg-danger">2</span>Dapibus ac facilisis in</li>
+                  <li class="list-group-item"><span class="badge bg-info">1</span>Morbi leo risus</li>
+                  <li class="list-group-item"><span class="badge bg-success">2</span>Porta ac consectetur ac</li>
+                  <li class="list-group-item"><span class="badge">6</span>Vestibulum at eros</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+		  
+        </div>
+		
+		
+        <div class="row">
+          <div class="col-md-5" style="width: 100%;">
+         <div class="widget">
+			
+           <div class="widget-heading" style="border-color:#1290ce;">
+             <h3 class="widget-title">Previous Work</h3>
+			        <div style="float:right; position:relative; top:-25px;">
+	        <button type="button" data-toggle="modal" data-target=".previousWorkModal" class="btn btn-outline btn-success">Edit</button>
+			        </div>
+           </div>
+		  
+           <div class="widget-body">
+           <table class="table">
+             <thead>
+               <tr>
+                 <th>Place</th>
+                 <th>Work</th>
+                 <th>Date Range</th>
+           
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                 <th scope="row">1</th>
+                 <td>Mark</td>
+                 <td>Otto</td>
+             
+               </tr>
+               <tr>
+                 <th scope="row">2</th>
+                 <td>Jacob</td>
+                 <td>Thornton</td>
+                 
+               </tr>
+               <tr>
+                 <th scope="row">3</th>
+                 <td>Larry</td>
+                 <td>the Bird</td>
+               
+               </tr>
+             </tbody>
+           </table>
+           </div>
+		    
+         </div>
+          </div>
+        </div>
+		
+        <div class="row">
+          <div class="col-md-6">
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title">About Me</h3>
+  				        <div style="float:right; position:relative; top:-25px;">
+  		        <button type="button" data-toggle="modal" data-target=".aboutModal" class="btn btn-outline btn-success">Edit</button>
+  				        </div>
+                </div>
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="panel panel-success">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Philosophy</h3>
+  				        <div style="float:right; position:relative; top:-25px;">
+  		        <button type="button" data-toggle="modal" data-target=".philosophyModal" class="btn btn-outline btn-success">Edit</button>
+  				        </div>
+                </div>
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+              </div>
+        </div>
+       
+       
+    </section>
+    <!-- Work Here end-->
+    <!-- Right Sidebar start-->
+    <aside class="right-sidebar closed"><a href="javascript:;" role="button" class="right-sidebar-toggle pull-right"><i class="ti-close text-muted"></i></a>
+      <h4 id="chat-title" class="text-center m-0 mb-20 fs-16">Chat list</h4>
+      <form id="chat-search" class="mb-10">
+        <div class="form-group has-feedback mb-0">
+          <input type="text" aria-describedby="inputChatSearch" placeholder="Chat with..." class="form-control rounded"><span aria-hidden="true" class="ti-search form-control-feedback"></span><span id="inputChatSearch" class="sr-only">(default)</span>
+        </div>
+      </form>
+      <ul class="chat-list mb-0 fs-12 media-list">
+        <li class="media"><a href="javascript:;" class="conversation-toggle">
+            <div class="media-left avatar"><img src="build/images/users/20.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-body">
+              <h6 class="media-heading">Jane Curtis</h6>
+              <p class="text-muted mb-0">Where are you from?</p>
+            </div>
+            <div class="media-right"><span class="badge bg-danger">2</span></div></a></li>
+        <li class="media"><a href="javascript:;" class="conversation-toggle">
+            <div class="media-left avatar"><img src="build/images/users/01.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-body">
+              <h6 class="media-heading">Edward Garcia</h6>
+              <p class="text-muted mb-0">Nice to meet you.</p>
+            </div></a></li>
+        <li class="media"><a href="javascript:;" class="conversation-toggle">
+            <div class="media-left avatar"><img src="build/images/users/02.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-body">
+              <h6 class="media-heading">Bruce Olson</h6>
+              <p class="text-muted mb-0">What do you want to do?</p>
+            </div></a></li>
+        <li class="media"><a href="javascript:;" class="conversation-toggle">
+            <div class="media-left avatar"><img src="build/images/users/03.jpg" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
+            <div class="media-body">
+              <h6 class="media-heading">Martha Rodriguez</h6>
+              <p class="text-muted mb-0">I'm hungry.</p>
+            </div>
+            <div class="media-right"><span class="badge bg-danger">1</span></div></a></li>
+        <li class="media"><a href="javascript:;" class="conversation-toggle">
+            <div class="media-left avatar"><img src="build/images/users/05.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-body">
+              <h6 class="media-heading">Hannah Williamson</h6>
+              <p class="text-muted mb-0">Do you know the address?</p>
+            </div></a></li>
+        <li class="media"><a href="javascript:;" class="conversation-toggle">
+            <div class="media-left avatar"><img src="build/images/users/06.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-body">
+              <h6 class="media-heading">Anthony Mills</h6>
+              <p class="text-muted mb-0">No problem.</p>
+            </div></a></li>
+        <li class="media"><a href="javascript:;" class="conversation-toggle">
+            <div class="media-left avatar"><img src="build/images/users/07.jpg" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
+            <div class="media-body">
+              <h6 class="media-heading">Ethan Stanley</h6>
+              <p class="text-muted mb-0">Hello?</p>
+            </div></a></li>
+        <li class="media"><a href="javascript:;" class="conversation-toggle">
+            <div class="media-left avatar"><img src="build/images/users/08.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-body">
+              <h6 class="media-heading">Jonathan Castro</h6>
+              <p class="text-muted mb-0">OK. Thanks.</p>
+            </div>
+            <div class="media-right"><span class="badge bg-danger">1</span></div></a></li>
+        <li class="media"><a href="javascript:;" class="conversation-toggle">
+            <div class="media-left avatar"><img src="build/images/users/09.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-body">
+              <h6 class="media-heading">Denise Rose</h6>
+              <p class="text-muted mb-0">Bye bye.</p>
+            </div></a></li>
+        <li class="media"><a href="javascript:;" class="conversation-toggle">
+            <div class="media-left avatar"><img src="build/images/users/10.jpg" alt="" class="media-object img-circle"><span class="status bg-danger"></span></div>
+            <div class="media-body">
+              <h6 class="media-heading">Eugene Meyer</h6>
+              <p class="text-muted mb-0">How are you?</p>
+            </div></a></li>
+      </ul>
+    </aside>
+    <aside class="conversation closed"><a href="javascript:;" class="conversation-toggle pull-left"><i class="ti-arrow-left text-muted"></i></a><a href="javascript:;" class="pull-right"><i class="ti-pencil text-muted"></i></a>
+      <h5 id="chat-with" class="text-center m-0 mb-20">Edward Garcia</h5>
+      <ul class="media-list chat-content fs-12">
+        <li class="media">
+          <div class="media-left avatar"><img src="build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+          <div class="media-body">
+            <p>Hello.</p>
+            <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted">09:45 PM <i class="ti-check text-success"></i></time>
+          </div>
+        </li>
+        <li class="media other">
+          <div class="media-body">
+            <p>Hi.</p>
+            <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted pull-right">09:46 PM <i class="ti-check text-success"></i></time>
+          </div>
+          <div class="media-right avatar"><img src="build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+        </li>
+        <li class="media">
+          <div class="media-left avatar"><img src="build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+          <div class="media-body">
+            <p>How are you?</p>
+            <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted">09:47 PM <i class="ti-check text-success"></i></time>
+          </div>
+        </li>
+        <li class="media other">
+          <div class="media-body">
+            <p>I'm good. How are you?</p>
+            <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted pull-right">09:50 PM <i class="ti-check text-success"></i></time>
+          </div>
+          <div class="media-right avatar"><img src="build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+        </li>
+        <li class="media">
+          <div class="media-left avatar"><img src="build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+          <div class="media-body">
+            <p>Good. Do you speak English?</p>
+            <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted">09:55 PM <i class="ti-check text-success"></i></time>
+          </div>
+        </li>
+        <li class="media other">
+          <div class="media-body">
+            <p>A little. Are you American?</p>
+            <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted pull-right">09:56 PM <i class="ti-check text-success"></i></time>
+          </div>
+          <div class="media-right avatar"><img src="build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+        </li>
+        <li class="media">
+          <div class="media-left avatar"><img src="build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+          <div class="media-body">
+            <p>Yes.</p>
+            <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted">10:00 PM <i class="ti-check text-success"></i></time>
+          </div>
+        </li>
+        <li class="media other">
+          <div class="media-body">
+            <p>Where are you from?</p>
+            <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted pull-right">10:01 PM <i class="ti-check text-success"></i></time>
+          </div>
+          <div class="media-right avatar"><img src="build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+        </li>
+        <li class="media">
+          <div class="media-left avatar"><img src="build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+          <div class="media-body">
+            <p>I'm from California.</p>
+            <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted">10:03 PM <i class="ti-check text-success"></i></time>
+          </div>
+        </li>
+        <li class="media other">
+          <div class="media-body">
+            <p>Nice to meet you.</p>
+            <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted pull-right">10:04 PM <i class="ti-check text-success"></i></time>
+          </div>
+          <div class="media-right avatar"><img src="build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+        </li>
+        <li class="media">
+          <div class="media-left avatar"><img src="build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+          <div class="media-body">
+            <p>Nice to meet you too.</p>
+            <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted">10:05 PM <i class="ti-check text-success"></i></time>
+          </div>
+        </li>
+      </ul>
+      <form id="chat-input">
+        <div class="form-group has-feedback mb-0">
+          <input type="text" aria-describedby="inputSendMessage" placeholder="Sent a message" class="form-control rounded"><span aria-hidden="true" class="ti-pencil-alt form-control-feedback"></span><span id="inputSendMessage" class="sr-only">(default)</span>
+        </div>
+      </form>
+    </aside>
+    <!-- Right Sidebar end-->
+    <!-- Demo Settings start-->
+    <div class="setting closed"><a href="javascript:;" class="setting-toggle fs-16"><i class="ti-settings text-muted"></i></a>
+      <h4 class="fs-16 mt-0 mb-15">Profile</h4>
+      <form class="form-horizontal">
+        <div class="clearfix">
+          <h6 class="pull-left fs-13 fw-400">Public</h6>
+          <div class="switch pull-right">
+            <input id="public-profile" type="checkbox">
+            <label for="public-profile" class="switch-success"></label>
+          </div>
+        </div>
+        <div class="clearfix">
+          <h6 class="pull-left fs-13 fw-400">Private</h6>
+          <div class="switch pull-right">
+            <input id="private-profile" type="checkbox" checked>
+            <label for="private-profile" class="switch-success"></label>
+          </div>
+        </div>
+		
+        <div class="clearfix">
+	<button type="button" data-toggle="modal" data-target=".editProfileModal" class="btn2"><h6 class="pull-left fs-13 fw-400">Edit Info</h6></button>
+        </div>
+      
+      </form>
+    </div>
+    
+    </div>
+	
+	
+    <!-- CONTACT MAIL MODAL-->
+    <div tabindex="-1" role="dialog" aria-labelledby="composeMail" class="modal fade compose-mail-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-orgboatBlue">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+            <h4 id="composeMail" class="modal-title">Compose Message</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <input id="contactInputEmail" type="text" placeholder="From" class="form-control">
+              </div>
+              <div class="form-group">
+                <input id="contactInputSubject" type="text" placeholder="Subject" class="form-control">
+              </div>
+              <textarea id="compose-mail"></textarea>
+              <div class="text-right">
+                <button type="button" data-dismiss="modal" class="btn btn-raised btn-default">Close</button>
+                <button type="button" class="btn btn-raised btn-black">Send Mail</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	
+	<!-- EDIT PROFILE INFO -->
+            <div tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade editProfileModal">
+              <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                    <h4 id="myModalLabel" class="modal-title">Job Categories</h4>
+                  </div>
+                  <div class="modal-body">
+                   <form>
+                     <div class="form-group">
+                       <label for="txtFullName">Full name</label>
+                       <input id="txtFullName" type="text" class="form-control">
+                     </div>
+                    
+                     <div class="form-group">
+                       <label for="txtEmailAddress">Email Address</label>
+                       <input id="txtEmailAddress" type="text" class="form-control">
+					   
+                     </div>
+                    
+                     <div class="form-group">
+                       <label for="txtCaptcha">Date of Birth</label>
+	                  <input id="single-date-picker" type="text" value="" class="form-control">
+                     </div>
+					  <div class="form-group">
+				<label for="txtCaptcha">City</label>
+			    <input id="geocomplete" type="text" placeholder="Type in an city" class="form-control"/>
+				 </div>
+                   <div class="form-group">
+	             <label>Profile Pic</label>
+	             <input id="input-10" type="file" accept="image/*" class="form-control"> 
+				   </div>
+                   </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-raised btn-default">Close</button>
+                    <button type="button" class="btn btn-black">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+			
+			
+	<!-- JOB CATEGORIES MODALS-->
+            <div tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade jobCategoriesModal">
+              <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                    <h4 id="myModalLabel" class="modal-title">Job Categories</h4>
+                  </div>
+                  <div class="modal-body">
+	                <form>
+						
+  	                  <div class="form-group">
+  	                    <label for="selectBasic">Select Category</label>
+  	                    <select id="selectBasic" class="form-control">
+  	                      <option value="1">Option one</option>
+  	                      <option value="2">Option two</option>
+  	                      <option value="3">Option three</option>
+  	                    </select>
+  	                  </div>
+					  
+                  <div class="form-group">
+                    <label for="selectMultiple">Select Sub Category</label>
+                    <select id="selectMultiple" multiple="multiple" style="height: 100px; overflow-y: auto" class="form-control">
+                      <option value="1">Option one</option>
+                      <option value="2">Option two</option>
+                      <option value="3">Option three</option>
+                    </select>
+                  </div>
+	                 
+	                  <div class="form-group">
+	                    <label for="textArea">Notes</label>
+	                    <textarea id="textArea" rows="3" class="form-control"></textarea>
+	                  </div>
+	                  
+	                </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-raised btn-default">Close</button>
+                    <button type="button" class="btn btn-black">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+			
+			
+					
+					<!-- SKILLS MODALS-->
+				            <div tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade skillsModal">
+				              <div role="document" class="modal-dialog">
+				                <div class="modal-content">
+				                  <div class="modal-header">
+				                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+				                    <h4 id="myModalLabel" class="modal-title">Skills</h4>
+				                  </div>
+				                  <div class="modal-body">
+				 	                <form>
+						
+			                    <div class="row">
+									<table id="skillTable">
+										<tr>
+											<td>
+			                      <div class="col-md-4" style="width:50%;">
+			                        <div class="form-group">
+			                          <label for="txtDirector">Skill</label>
+			                          <input id="txtDirector" type="text" class="form-control">
+			                        </div>
+			                      </div>
+							  </td>
+							  <td>
+			                      <div class="col-md-4" style="width:50%;">
+			                        <div class="form-group">
+			                          <label for="txtWriter">Level</label>
+			                      <select id="selectBasic" class="form-control">
+			                         <option value="1">1 - Beginner</option>
+			                         <option value="2">2 - Basic</option>
+			                         <option value="3">3 - Medium</option>
+									 <option value="4">4 - Good</option>
+									 <option value="5">5 - Excellent</option>
+			                       </select>
+			                        </div>
+			                      </div>
+							  </td>
+							  </tr>
+							  </table>
+							 
+			                      <div class="col-md-4" style="float:right;">
+			                        <div class="form-group">
+			                          <button type="submit" class="btn btn-outline btn-success">Add Skill</button>
+								  </div>
+							  </div>
+							  
+			                    </div>
+				 	                </form>
+				                  </div>
+				                  <div class="modal-footer">
+				                    <button type="button" data-dismiss="modal" class="btn btn-raised btn-default">Close</button>
+				                    <button type="button" class="btn btn-black">Save changes</button>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+							<SCRIPT LANGUAGE="JavaScript">
+							function addRow(item1) {
+							    if (item1) {
+							        // assign long reference to shorter var name
+							        var theTable = document.all.skillTable;
+							        // append new row to the end of the table
+							        var newRow = theTable.insertRow(theTable.rows.length)
+							        // give the row its own ID
+							        newRow.id = newRow.uniqueID
+        
+							        // declare cell variable
+							        var newCell
+        
+							        // an inserted row has no cells, so insert the cells
+							        newCell = newRow.insertCell(0)
+							        // give this cell its own id
+							        newCell.id = newCell.uniqueID
+							        // display the row's id as the cell text
+							        newCell.innerText = newRow.id
+							        newCell.bgColor = "yellow"
+							        // reuse cell var for second cell insertion
+							        newCell = newRow.insertCell(1)
+							        newCell.id = newCell.uniqueID
+							        newCell.innerText = item1
+							    }
+							}
+							</SCRIPT>
+							
+					<!-- PREVIOUS WORK MODALS-->
+				            <div tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade previousWorkModal">
+				              <div role="document" class="modal-dialog">
+				                <div class="modal-content">
+				                  <div class="modal-header">
+				                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+				                    <h4 id="myModalLabel" class="modal-title">Previous Work</h4>
+				                  </div>
+				                  <div class="modal-body">
+				                   <div class="row">
+				                     <div class="col-md-4">
+				                       <div class="form-group">
+				                         <label for="txtDirector">Place</label>
+				                         <input id="txtDirector" type="text" class="form-control">
+				                       </div>
+				                     </div>
+				                     <div class="col-md-4">
+				                       <div class="form-group">
+				                         <label for="txtWriter">Work</label>
+				                         <input id="txtWriter" type="text" class="form-control">
+				                       </div>
+				                     </div>
+				                     <div class="col-md-4">
+				                       <div class="form-group">
+				                         <label for="txtProducer">Date Range</label>
+				                      <input id="bottom-left-picker" type="text" value="01/01/2015 - 02/15/2015" class="form-control">
+				                       </div>
+				                     </div>
+				                   </div>
+				                  </div>
+				                  <div class="modal-footer">
+				                    <button type="button" data-dismiss="modal" class="btn btn-raised btn-default">Close</button>
+				                    <button type="button" class="btn btn-black">Save changes</button>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+	
+	<!-- ABOUT MODALS-->
+            <div tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade aboutModal">
+              <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                    <h4 id="myModalLabel" class="modal-title">About Me</h4>
+                  </div>
+                  <div class="modal-body">
+	                <form>
+	                 
+	                  <div class="row">
+	                    <div class="col-lg-12">
+	                      <div class="form-group">
+	                        <label for="txtReview">Review</label>
+	                        <textarea id="txtReview" name="review" rows="8" class="form-control"></textarea>
+	                      </div>
+	                    </div>
+	                  </div>
+	                
+	                 
+	                </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-raised btn-default">Close</button>
+                    <button type="button" class="btn btn-black">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+			
+			
+			<!-- PHILOSOPHY MODALS-->
+		            <div tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade philosophyModal">
+		              <div role="document" class="modal-dialog">
+		                <div class="modal-content">
+		                  <div class="modal-header">
+		                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+		                    <h4 id="myModalLabel" class="modal-title">Philosophy</h4>
+		                  </div>
+		                  <div class="modal-body">
+	   	                <form>
+	                 
+	   	                  <div class="row">
+	   	                    <div class="col-lg-12">
+	   	                      <div class="form-group">
+	   	                        <label for="txtReview">Review</label>
+	   	                        <textarea id="txtReview" name="review" rows="8" class="form-control"></textarea>
+	   	                      </div>
+	   	                    </div>
+	   	                  </div>
+	                
+	                 
+	   	                </form>
+		                  </div>
+		                  <div class="modal-footer">
+		                    <button type="button" data-dismiss="modal" class="btn btn-raised btn-default">Close</button>
+		                    <button type="button" class="btn btn-black">Save changes</button>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+					
+    <!-- jQuery-->
+    <script type="text/javascript" src="plugins/jquery/dist/jquery.min.js"></script>
+    <!-- jQuery Cookie-->
+    <script type="text/javascript" src="plugins/jquery.cookie/jquery.cookie.js"></script>
+    <!-- Bootstrap JavaScript-->
+    <script type="text/javascript" src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- jQuery Advanced News Ticker-->
+    <script type="text/javascript" src="plugins/jquery-advanced-news-ticker/js/newsTicker.js"></script>
+    <!-- Malihu Scrollbar-->
+    <script type="text/javascript" src="plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Animo.js-->
+    <script type="text/javascript" src="plugins/animo.js/animo.min.js"></script>
+    <!-- Bootstrap Progressbar-->
+    <script type="text/javascript" src="plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- Sparkline-->
+    <script type="text/javascript" src="plugins/kapusta-jquery.sparkline/dist/jquery.sparkline.min.js"></script>
+    <!-- Summernote-->
+    <script type="text/javascript" src="plugins/summernote/dist/summernote.min.js"></script>
+    <!-- MomentJS-->
+       <script type="text/javascript" src="plugins/moment/min/moment.min.js"></script>
+       <!-- Bootstrap Date Range Picker-->
+       <script type="text/javascript" src="plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- Custom JS-->
+    <script type="text/javascript" src="build/js/app.js"></script>
+    <script type="text/javascript" src="build/js/demo.js"></script>
+	<script type="text/javascript" src="build/js/pages/date-range-picker.js"></script>
+    
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script src="build/js/jquery.geocomplete.js"></script>
+    <script src="build/js/logger.js"></script>
+    
+    <script>
+	var gm = jQuery.noConflict();
+      gm(function(){
+        
+        gm("#geocomplete").geocomplete()
+          .bind("geocode:result", function(event, result){
+            gm.log("Result: " + result.formatted_address);
+          })
+          .bind("geocode:error", function(event, status){
+            gm.log("ERROR: " + status);
+          })
+          .bind("geocode:multiple", function(event, results){
+            gm.log("Multiple: " + results.length + " results found");
+          });
+        
+        gm("#find").click(function(){
+          gm("#geocomplete").trigger("geocode");
+        });
+        
+        
+        gm("#examples a").click(function(){
+          gm("#geocomplete").val($(this).text()).trigger("geocode");
+          return false;
+        });
+        
+      });
+    </script>
+	
+  </body>
+</html>

@@ -1,0 +1,22 @@
+extends ../template/extra-template.jade
+block title
+  title Umega App - 403 Forbidden
+block main-content
+  body.error-page
+    h1.error-code
+      | 4
+      i.ti-face-sad.error-icon
+      | 3
+    h3.error-title Access denied!
+    p.error-sentence You don't have permission to access on this server.
+    a.error-action.btn.btn-lg.btn-outline.btn-rounded.btn-primary(href='index.html', role='button') Go to home page
+    ul.list-inline.mt-20
+      li
+        a.text-info.fs-20(href='#')
+          i.ti-twitter-alt
+      li
+        a.text-primary.fs-20(href='#')
+          i.ti-facebook
+      li
+        a.text-danger.fs-20(href='#')
+          i.ti-google

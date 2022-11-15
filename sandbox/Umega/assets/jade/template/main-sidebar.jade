@@ -1,0 +1,192 @@
+// Main Sidebar start
+aside.main-sidebar.pinned
+  .brand
+    a.logo(href='index.html')
+      i.ti-underline
+      h2 MEGA
+        span app
+    a.sidebar-toggle.visible-xs-block(href='javascript:;', role='button')
+      i.ti-close.text-white
+  .profile
+    img.avatar.img-circle(src=build+'images/users/04.jpg', alt='')
+    span.status.bg-success
+    h5.text-white.mb-5 Matthew Gonzalez
+    .text-muted Designer
+  // Nav tabs
+  ul.nav.nav-tabs.nav-justified.nav-sidebar(role='tablist')
+    li.active(role='presentation')
+      a(href='#menu', aria-controls='menu', role='tab', data-toggle='tab')
+        i.ti-menu
+    li(role='presentation')
+      a(href='#portfolio', aria-controls='portfolio', role='tab', data-toggle='tab')
+        i.ti-user
+    li.bubble(role='presentation')
+      a(href='#email', aria-controls='email', role='tab', data-toggle='tab')
+        i.ti-email
+          span.dot.bg-danger
+    li(role='presentation')
+      a(href='#setting', aria-controls='setting', role='tab', data-toggle='tab')
+        i.ti-server
+  // Tab panes
+  .tab-content.nav-sidebar-content
+    #menu.tab-pane.fade.in.active(role='tabpanel')
+      block navigation
+      .header Server Status
+      ul.list-unstyled.pl-15.pr-15
+        li.mb-20
+          .block.clearfix.mb-10
+            span.pull-left.fs-12.text-muted CPU Used
+            span.pull-right.label.label-outline.label-warning 65%
+          .progress.progress-xs.mb-0
+            .progress-bar.progress-bar-warning(role='progressbar', data-transitiongoal='65')
+        li.mb-20
+          .block.clearfix.mb-10
+            span.pull-left.fs-12.text-muted Bandwidth
+            span.pull-right.label.label-outline.label-danger 80%
+          .progress.progress-xs.mb-0
+            .progress-bar.progress-bar-danger(role='progressbar', data-transitiongoal='80')
+    #portfolio.tab-pane.fade(role='tabpanel')
+      .header Rating
+      .rating.clearfix
+        .pull-left.score.bg-black.fs-24.fw-600.text-center 4.2
+        .pull-left
+          .progress
+            .progress-bar.five-star(role='progressbar', data-transitiongoal='100')
+          .progress
+            .progress-bar.four-star(role='progressbar', data-transitiongoal='80')
+          .progress
+            .progress-bar.three-star(role='progressbar', data-transitiongoal='10')
+          .progress
+            .progress-bar.two-star(role='progressbar', data-transitiongoal='25')
+          .progress
+            .progress-bar.one-star(role='progressbar', data-transitiongoal='5')
+      p.text-center.fs-12.mt-5.mb-0 average based on 1,056 ratings
+      .header Followers
+      .followers
+        img.img-circle(src=build+'images/users/02.jpg', alt='')
+        img.img-circle(src=build+'images/users/03.jpg', alt='')
+        img.img-circle(src=build+'images/users/10.jpg', alt='')
+        a.more.img-circle.text-center.fs-24.fw-600.text-info(href='#') +
+      p.text-center.fs-12.mt-5.mb-0 2,590 followers and 8,320 sales
+      .header Visitors
+      #sp-visitors
+      p.text-center.fs-12.mt-5.mb-0 3,320 visitors in last 10 days
+      .header Revenue
+      #sp-revenue
+      p.text-center.fs-12.mt-5.mb-0 8.59k revenue estimate in last 10 days
+      .header Your New Blog Posts
+      ul.posts.media-list
+        li.media
+          .media-left
+            a.inline-block(href='#')
+              img.media-object.mo-lg(src=build+'images/posts/01.jpg', alt='')
+          .media-body.media-middle
+            a(href='#')
+              h6.media-heading.text-muted The first chapter
+            time.fs-11(datetime='2015-09-14T14:28:26+07:00') September 14, 2015
+        li.media
+          .media-left
+            a.inline-block(href='#')
+              img.media-object.mo-lg(src=build+'images/posts/02.jpg', alt='')
+          .media-body.media-middle
+            a(href='#')
+              h6.media-heading.text-muted A simple image post
+            time.fs-11(datetime='2015-10-10T20:27:48+07:00') October 10, 2015
+        li.media
+          .media-left
+            a.inline-block(href='#')
+              img.media-object.mo-lg(src=build+'images/posts/03.jpg', alt='')
+          .media-body.media-middle
+            a(href='#')
+              h6.media-heading.text-muted The sweet life
+            time.fs-11(datetime='2015-11-10T20:27:48+07:00') November 10, 2015
+        li.media
+          .media-left
+            a.inline-block(href='#')
+              img.media-object.mo-lg(src=build+'images/posts/04.jpg', alt='')
+          .media-body.media-middle
+            a(href='#')
+              h6.media-heading.text-muted Enjoy the moment
+            time.fs-11(datetime='2015-12-10T20:27:48+07:00') December 10, 2015
+    #email.tab-pane.fade(role='tabpanel')
+      button.btn.btn-raised.btn-block.btn-danger.mt-10(type='button', data-toggle='modal', data-target='.compose-mail-modal')
+        i.ti-pencil-alt
+        |  Compose Mail
+      ul.list-unstyled.navigation.mb-0
+        li.header Email
+        li
+          a.bubble(href='mailbox.html')
+            i.ti-archive
+            |  Inbox
+            span.badge.bg-danger 5
+        li
+          a(href='mailbox.html')
+            i.ti-location-arrow
+            |  Sent
+        li
+          a(href='mailbox.html')
+            i.ti-notepad
+            |  Draft
+        li
+          a(href='mailbox.html')
+            i.ti-trash
+            |  Trash
+        li
+          a(href='mailbox.html')
+            i.ti-flag-alt
+            |  Important
+        li
+          a(href='mailbox.html')
+            i.ti-star
+            |  Starred
+        li.header Folders
+        li
+          a(href='#')
+            i.ti-folder
+            |  Newsletter
+        li
+          a(href='#')
+            i.ti-folder
+            |  Friend
+        li
+          a(href='#')
+            i.ti-folder
+            |  Company
+        li
+          a(href='#')
+            i.ti-folder
+            |  Downloaded
+    #setting.tab-pane.fade(role='tabpanel')
+      .header General Settings
+      form.form-horizontal
+        .clearfix
+          h6.pull-left.fs-13 Maintenance Mode
+          .switch.pull-right
+            input#setting-1(type='checkbox', checked='')
+            label.switch-success(for='setting-1')
+        p.fs-12 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+        .clearfix
+          h6.pull-left.fs-13 Location Services
+          .switch.pull-right
+            input#setting-2(type='checkbox', checked='')
+            label.switch-success(for='setting-2')
+        p.fs-12 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+        .clearfix
+          h6.pull-left.fs-13 Display Errors
+          .switch.pull-right
+            input#setting-3(type='checkbox', checked='')
+            label.switch-success(for='setting-3')
+        p.fs-12 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+        .clearfix
+          h6.pull-left.fs-13 Use SEO URLs
+          .switch.pull-right
+            input#setting-4(type='checkbox', checked='')
+            label.switch-success(for='setting-4')
+        p.fs-12 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+        .clearfix
+          h6.pull-left.fs-13 Enable History
+          .switch.pull-right
+            input#setting-5(type='checkbox', checked='')
+            label.switch-success(for='setting-5')
+        p.fs-12 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+// Main Sidebar end

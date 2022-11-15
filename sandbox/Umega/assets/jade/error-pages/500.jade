@@ -1,0 +1,22 @@
+extends ../template/extra-template.jade
+block title
+  title Umega App - 500 Internal Server Error
+block main-content
+  body.error-page
+    h1.error-code
+      | 5
+      i.ti-face-sad.error-icon
+      i.ti-face-sad.error-icon
+    h3.error-title Unexpected error!
+    p.error-sentence An error occurred and your request couldn't be completed.
+    a.error-action.btn.btn-lg.btn-outline.btn-rounded.btn-primary(href='index.html', role='button') Go to home page
+    ul.list-inline.mt-20
+      li
+        a.text-info.fs-20(href='#')
+          i.ti-twitter-alt
+      li
+        a.text-primary.fs-20(href='#')
+          i.ti-facebook
+      li
+        a.text-danger.fs-20(href='#')
+          i.ti-google

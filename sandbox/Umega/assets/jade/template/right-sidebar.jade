@@ -1,0 +1,209 @@
+// Right Sidebar start
+aside.right-sidebar.closed
+  a.right-sidebar-toggle.pull-right(href='javascript:;', role='button')
+    i.ti-close.text-muted
+  h4#chat-title.text-center.m-0.mb-20.fs-16 Chat list
+  form#chat-search.mb-10
+    .form-group.has-feedback.mb-0
+      input.form-control.rounded(type='text', aria-describedby='inputChatSearch', placeholder='Chat with...')
+      span.ti-search.form-control-feedback(aria-hidden='true')
+      span#inputChatSearch.sr-only (default)
+  ul.chat-list.mb-0.fs-12.media-list
+    li.media
+      a.conversation-toggle(href='javascript:;')
+        .media-left.avatar
+          img.media-object.img-circle(src=build+'images/users/20.jpg', alt='')
+          span.status.bg-success
+        .media-body
+          h6.media-heading Jane Curtis
+          p.text-muted.mb-0 Where are you from?
+        .media-right
+          span.badge.bg-danger 2
+    li.media
+      a.conversation-toggle(href='javascript:;')
+        .media-left.avatar
+          img.media-object.img-circle(src=build+'images/users/01.jpg', alt='')
+          span.status.bg-success
+        .media-body
+          h6.media-heading Edward Garcia
+          p.text-muted.mb-0 Nice to meet you.
+    li.media
+      a.conversation-toggle(href='javascript:;')
+        .media-left.avatar
+          img.media-object.img-circle(src=build+'images/users/02.jpg', alt='')
+          span.status.bg-success
+        .media-body
+          h6.media-heading Bruce Olson
+          p.text-muted.mb-0 What do you want to do?
+    li.media
+      a.conversation-toggle(href='javascript:;')
+        .media-left.avatar
+          img.media-object.img-circle(src=build+'images/users/03.jpg', alt='')
+          span.status.bg-warning
+        .media-body
+          h6.media-heading Martha Rodriguez
+          p.text-muted.mb-0 I'm hungry.
+        .media-right
+          span.badge.bg-danger 1
+    li.media
+      a.conversation-toggle(href='javascript:;')
+        .media-left.avatar
+          img.media-object.img-circle(src=build+'images/users/05.jpg', alt='')
+          span.status.bg-success
+        .media-body
+          h6.media-heading Hannah Williamson
+          p.text-muted.mb-0 Do you know the address?
+    li.media
+      a.conversation-toggle(href='javascript:;')
+        .media-left.avatar
+          img.media-object.img-circle(src=build+'images/users/06.jpg', alt='')
+          span.status.bg-success
+        .media-body
+          h6.media-heading Anthony Mills
+          p.text-muted.mb-0 No problem.
+    li.media
+      a.conversation-toggle(href='javascript:;')
+        .media-left.avatar
+          img.media-object.img-circle(src=build+'images/users/07.jpg', alt='')
+          span.status.bg-warning
+        .media-body
+          h6.media-heading Ethan Stanley
+          p.text-muted.mb-0 Hello?
+    li.media
+      a.conversation-toggle(href='javascript:;')
+        .media-left.avatar
+          img.media-object.img-circle(src=build+'images/users/08.jpg', alt='')
+          span.status.bg-success
+        .media-body
+          h6.media-heading Jonathan Castro
+          p.text-muted.mb-0 OK. Thanks.
+        .media-right
+          span.badge.bg-danger 1
+    li.media
+      a.conversation-toggle(href='javascript:;')
+        .media-left.avatar
+          img.media-object.img-circle(src=build+'images/users/09.jpg', alt='')
+          span.status.bg-success
+        .media-body
+          h6.media-heading Denise Rose
+          p.text-muted.mb-0 Bye bye.
+    li.media
+      a.conversation-toggle(href='javascript:;')
+        .media-left.avatar
+          img.media-object.img-circle(src=build+'images/users/10.jpg', alt='')
+          span.status.bg-danger
+        .media-body
+          h6.media-heading Eugene Meyer
+          p.text-muted.mb-0 How are you?
+aside.conversation.closed
+  a.conversation-toggle.pull-left(href='javascript:;')
+    i.ti-arrow-left.text-muted
+  a.pull-right(href='javascript:;')
+    i.ti-pencil.text-muted
+  h5#chat-with.text-center.m-0.mb-20 Edward Garcia
+  ul.media-list.chat-content.fs-12
+    li.media
+      .media-left.avatar
+        img.media-object.img-circle(src=build+'images/users/04.jpg', alt='')
+        span.status.bg-success
+      .media-body
+        p Hello.
+        time.fs-11.text-muted(datetime='2015-12-10T20:50:48+07:00')
+          | 09:45 PM 
+          i.ti-check.text-success
+    li.media.other
+      .media-body
+        p Hi.
+        time.fs-11.text-muted.pull-right(datetime='2015-12-10T20:50:48+07:00')
+          | 09:46 PM 
+          i.ti-check.text-success
+      .media-right.avatar
+        img.media-object.img-circle(src=build+'images/users/18.jpg', alt='')
+        span.status.bg-success
+    li.media
+      .media-left.avatar
+        img.media-object.img-circle(src=build+'images/users/04.jpg', alt='')
+        span.status.bg-success
+      .media-body
+        p How are you?
+        time.fs-11.text-muted(datetime='2015-12-10T20:50:48+07:00')
+          | 09:47 PM 
+          i.ti-check.text-success
+    li.media.other
+      .media-body
+        p I'm good. How are you?
+        time.fs-11.text-muted.pull-right(datetime='2015-12-10T20:50:48+07:00')
+          | 09:50 PM 
+          i.ti-check.text-success
+      .media-right.avatar
+        img.media-object.img-circle(src=build+'images/users/18.jpg', alt='')
+        span.status.bg-success
+    li.media
+      .media-left.avatar
+        img.media-object.img-circle(src=build+'images/users/04.jpg', alt='')
+        span.status.bg-success
+      .media-body
+        p Good. Do you speak English?
+        time.fs-11.text-muted(datetime='2015-12-10T20:50:48+07:00')
+          | 09:55 PM 
+          i.ti-check.text-success
+    li.media.other
+      .media-body
+        p A little. Are you American?
+        time.fs-11.text-muted.pull-right(datetime='2015-12-10T20:50:48+07:00')
+          | 09:56 PM 
+          i.ti-check.text-success
+      .media-right.avatar
+        img.media-object.img-circle(src=build+'images/users/18.jpg', alt='')
+        span.status.bg-success
+    li.media
+      .media-left.avatar
+        img.media-object.img-circle(src=build+'images/users/04.jpg', alt='')
+        span.status.bg-success
+      .media-body
+        p Yes.
+        time.fs-11.text-muted(datetime='2015-12-10T20:50:48+07:00')
+          | 10:00 PM 
+          i.ti-check.text-success
+    li.media.other
+      .media-body
+        p Where are you from?
+        time.fs-11.text-muted.pull-right(datetime='2015-12-10T20:50:48+07:00')
+          | 10:01 PM 
+          i.ti-check.text-success
+      .media-right.avatar
+        img.media-object.img-circle(src=build+'images/users/18.jpg', alt='')
+        span.status.bg-success
+    li.media
+      .media-left.avatar
+        img.media-object.img-circle(src=build+'images/users/04.jpg', alt='')
+        span.status.bg-success
+      .media-body
+        p I'm from California.
+        time.fs-11.text-muted(datetime='2015-12-10T20:50:48+07:00')
+          | 10:03 PM 
+          i.ti-check.text-success
+    li.media.other
+      .media-body
+        p Nice to meet you.
+        time.fs-11.text-muted.pull-right(datetime='2015-12-10T20:50:48+07:00')
+          | 10:04 PM 
+          i.ti-check.text-success
+      .media-right.avatar
+        img.media-object.img-circle(src=build+'images/users/18.jpg', alt='')
+        span.status.bg-success
+    li.media
+      .media-left.avatar
+        img.media-object.img-circle(src=build+'images/users/04.jpg', alt='')
+        span.status.bg-success
+      .media-body
+        p Nice to meet you too.
+        time.fs-11.text-muted(datetime='2015-12-10T20:50:48+07:00')
+          | 10:05 PM 
+          i.ti-check.text-success
+  form#chat-input
+    .form-group.has-feedback.mb-0
+      input.form-control.rounded(type='text', aria-describedby='inputSendMessage', placeholder='Sent a message')
+      span.ti-pencil-alt.form-control-feedback(aria-hidden='true')
+      span#inputSendMessage.sr-only (default)
+// Right Sidebar end

@@ -1,0 +1,837 @@
+extends ../template/template.jade
+block css
+  // Toastr
+  link(rel='stylesheet', type='text/css', href=plugins+'toastr/toastr.min.css')
+  // SpinKit
+  link(rel='stylesheet', type='text/css', href=plugins+'SpinKit/css/spinners/7-three-bounce.css')
+  // Jvector Map
+  link(rel='stylesheet', type='text/css', href=plugins+'jvectormap/jquery-jvectormap-2.0.3.css')
+  // Morris Chart
+  link(rel='stylesheet', type='text/css', href=plugins+'morris.js/morris.css')
+  // DataTables
+  link(rel='stylesheet', type='text/css', href=plugins+'datatables.net-bs/css/dataTables.bootstrap.min.css')
+  link(rel='stylesheet', type='text/css', href=plugins+'datatables.net-buttons-bs/css/buttons.bootstrap.min.css')
+  link(rel='stylesheet', type='text/css', href=plugins+'datatables.net-colreorder-bs/css/colReorder.bootstrap.min.css')
+  link(rel='stylesheet', type='text/css', href=plugins+'datatables.net-responsive-bs/css/responsive.bootstrap.min.css')
+  // Weather Icons
+  link(rel='stylesheet', type='text/css', href=plugins+'weather-icons/css/weather-icons-wind.min.css')
+  link(rel='stylesheet', type='text/css', href=plugins+'weather-icons/css/weather-icons.min.css')
+  // FullCalendar
+  link(rel='stylesheet', type='text/css', href=plugins+'fullcalendar/dist/fullcalendar.min.css')
+  link(rel='stylesheet', type='text/css', href=plugins+'fullcalendar/dist/fullcalendar.print.css', media='print')
+  // jQuery MiniColors
+  link(rel='stylesheet', type='text/css', href=plugins+'jquery-minicolors/jquery.minicolors.css')
+  // Bootstrap Date Range Picker
+  link(rel='stylesheet', type='text/css', href=plugins+'bootstrap-daterangepicker/daterangepicker.css')
+block js
+  // Toastr
+  script(type='text/javascript', src=plugins+'toastr/toastr.min.js')
+  // MomentJS
+  script(type='text/javascript', src=plugins+'moment/min/moment.min.js')
+  // jQuery BlockUI
+  script(type='text/javascript', src=plugins+'blockUI/jquery.blockUI.js')
+  // jQuery Counter Up
+  script(type='text/javascript', src=plugins+'jquery-waypoints/waypoints.min.js')
+  script(type='text/javascript', src=plugins+'Counter-Up/jquery.counterup.min.js')
+  // Jvector Map
+  script(type='text/javascript', src=plugins+'jvectormap/jquery-jvectormap-2.0.3.min.js')
+  script(type='text/javascript', src=plugins+'jvectormap/maps/jquery-jvectormap-world-mill.js')
+  // Flot Charts
+  <!--[if lte IE 8]>
+  <script type="text/javascript" src="https://raw.githubusercontent.com/flot/flot/master/excanvas.min.js"></script>
+  <![endif]-->
+  script(type='text/javascript', src=plugins+'flot/jquery.flot.js')
+  script(type='text/javascript', src=plugins+'flot/jquery.flot.resize.js')
+  script(type='text/javascript', src=plugins+'flot.curvedlines/curvedLines.js')
+  script(type='text/javascript', src=plugins+'flot.tooltip/js/jquery.flot.tooltip.min.js')
+  // Morris Chart
+  script(type='text/javascript', src=plugins+'raphael/raphael-min.js')
+  script(type='text/javascript', src=plugins+'morris.js/morris.min.js')
+  // jQuery Easy Pie Chart
+  script(type='text/javascript', src=plugins+'jquery.easy-pie-chart/dist/jquery.easypiechart.min.js')
+  // DataTables
+  script(type='text/javascript', src=plugins+'datatables.net/js/jquery.dataTables.min.js')
+  script(type='text/javascript', src=plugins+'datatables.net-bs/js/dataTables.bootstrap.min.js')
+  script(type='text/javascript', src=plugins+'datatables.net-buttons/js/dataTables.buttons.min.js')
+  script(type='text/javascript', src=plugins+'datatables.net-buttons-bs/js/buttons.bootstrap.min.js')
+  script(type='text/javascript', src=plugins+'jszip/dist/jszip.min.js')
+  script(type='text/javascript', src=plugins+'pdfmake/build/pdfmake.min.js')
+  script(type='text/javascript', src=plugins+'pdfmake/build/vfs_fonts.js')
+  script(type='text/javascript', src=plugins+'datatables.net-buttons/js/buttons.print.min.js')
+  script(type='text/javascript', src=plugins+'datatables.net-buttons/js/buttons.html5.min.js')
+  script(type='text/javascript', src=plugins+'datatables.net-colreorder/js/dataTables.colReorder.min.js')
+  script(type='text/javascript', src=plugins+'datatables.net-responsive/js/dataTables.responsive.min.js')
+  script(type='text/javascript', src=plugins+'datatables.net-responsive-bs/js/responsive.bootstrap.js')
+  // jQuery UI
+  script(type='text/javascript', src=plugins+'jquery-ui/jquery-ui.min.js')
+  // FullCalendar
+  script(type='text/javascript', src=plugins+'fullcalendar/dist/fullcalendar.min.js')
+  // jQuery MiniColors
+  script(type='text/javascript', src=plugins+'jquery-minicolors/jquery.minicolors.min.js')
+  // Bootstrap Date Range Picker
+  script(type='text/javascript', src=plugins+'bootstrap-daterangepicker/daterangepicker.js')
+block custom-js
+  script(type='text/javascript', src=build+'js/pages/yellow-skin.js')
+block title
+  title Umega App - Yellow Skin
+block navigation
+  ul.list-unstyled.navigation.mb-0
+    li.header Main
+    li
+      a.bubble(href='index.html')
+        i.ti-home
+        |  Dashboard
+        span.badge.bg-danger 3
+    li.panel
+      a.active(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse2', aria-expanded='true', aria-controls='collapse2')
+        i.ti-palette
+        |  Skins
+      ul#collapse2.list-unstyled.collapse.in
+        li
+          a(href='red-skin.html') Red
+        li
+          a(href='green-skin.html') Green
+        li
+          a.active(href='yellow-skin.html') Yellow
+    li.header Components
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse3', aria-expanded='false', aria-controls='collapse3')
+        i.ti-receipt
+        |  Basic
+      ul#collapse3.list-unstyled.collapse
+        li
+          a(href='buttons.html') Buttons
+        li
+          a(href='carousels.html') Carousels
+        li
+          a(href='containers.html') Containers
+        li
+          a(href='dialogs.html') Dialogs
+        li
+          a(href='basic-inputs.html') Inputs
+        li
+          a(href='navigations.html') Navigations
+        li
+          a(href='progress-bars.html') Progress bars
+        li
+          a(href='typography.html') Typography
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse4', aria-expanded='false', aria-controls='collapse4')
+        i.ti-ruler-pencil
+        |  Editors
+      ul#collapse4.list-unstyled.collapse
+        li
+          a(href='summernote.html') Summernote
+        li
+          a(href='bootstrap-markdown.html') Bootstrap markdown
+        li
+          a(href='code-prettify.html') Code prettify
+        li
+          a(href='ckeditor.html') CKEditor
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse5', aria-expanded='false', aria-controls='collapse5')
+        i.ti-location-arrow
+        |  Pickers
+      ul#collapse5.list-unstyled.collapse
+        li
+          a(href='color-picker.html') Color picker
+        li
+          a(href='datetime-picker.html') Datetime picker
+        li
+          a(href='clock-picker.html') Clock picker
+        li
+          a(href='date-range-picker.html') Date range picker
+        li
+          a(href='multi-select.html') Multi select
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse6', aria-expanded='false', aria-controls='collapse6')
+        i.ti-layers-alt
+        |  Forms
+      ul#collapse6.list-unstyled.collapse
+        li
+          a(href='form-layouts.html') Layouts
+        li
+          a(href='jquery-validation.html') Validation
+        li
+          a(href='jquery-steps.html') Wizard
+        li
+          a(href='other-plugins.html') Other plugins
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse7', aria-expanded='false', aria-controls='collapse7')
+        i.ti-face-smile
+        |  Icons
+      ul#collapse7.list-unstyled.collapse
+        li
+          a(href='glyphicons.html') Glyphicons
+        li
+          a(href='font-awesome.html') Font awesome
+        li
+          a(href='material-design.html') Material design
+        li
+          a(href='themify.html') Themify
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse8', aria-expanded='false', aria-controls='collapse8')
+        i.ti-layout-grid2
+        |  Tables
+      ul#collapse8.list-unstyled.collapse
+        li
+          a(href='basic-tables.html') Basic tables
+        li
+          a(href='data-tables.html') Data tables
+        li
+          a(href='pricing-tables.html') Pricing tables
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse9', aria-expanded='false', aria-controls='collapse9')
+        i.ti-control-forward
+        |  Animations
+      ul#collapse9.list-unstyled.collapse
+        li
+          a(href='basic-animations.html') Basic
+        li
+          a(href='loading-animations.html') Loading
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse10', aria-expanded='false', aria-controls='collapse10')
+        i.ti-upload
+        |  File uploads
+      ul#collapse10.list-unstyled.collapse
+        li
+          a(href='dropzone-js.html') Dropzone
+        li
+          a(href='bootstrap-file-input.html') Bootstrap file input
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse11', aria-expanded='false', aria-controls='collapse11')
+        i.ti-info-alt
+        |  Indicators
+      ul#collapse11.list-unstyled.collapse
+        li
+          a(href='toastr.html') Toastr
+        li
+          a(href='sweet-alert.html') Sweet alert
+    li.header Data visualization
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse12', aria-expanded='false', aria-controls='collapse12')
+        i.ti-bar-chart
+        |  Charts
+      ul#collapse12.list-unstyled.collapse
+        li
+          a(href='flot-charts.html') Flot charts
+        li
+          a(href='morris-charts.html') Morris charts
+        li
+          a(href='chart-js.html') Chart.js
+        li
+          a(href='other-charts.html') Other charts
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse13', aria-expanded='false', aria-controls='collapse13')
+        i.ti-location-pin
+        |  Maps
+      ul#collapse13.list-unstyled.collapse
+        li
+          a(href='vector-maps.html') Vector maps
+        li
+          a(href='google-maps.html') Google maps
+    li.header Page kits
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse14', aria-expanded='false', aria-controls='collapse14')
+        i.ti-alert
+        |  Error pages
+      ul#collapse14.list-unstyled.collapse
+        li
+          a(href='400.html') 400 Bad request
+        li
+          a(href='401.html') 401 Unauthorized
+        li
+          a(href='403.html') 403 Forbidden
+        li
+          a(href='404.html') 404 Not found
+        li
+          a(href='500.html') 500 Internal server error
+        li
+          a(href='503.html') 503 Service unavailable
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse15', aria-expanded='false', aria-controls='collapse15')
+        i.ti-user
+        |  User pages
+      ul#collapse15.list-unstyled.collapse
+        li
+          a(href='login.html') Login
+        li
+          a(href='register.html') Registration
+        li
+          a(href='forgot.html') Forgot password
+        li
+          a(href='lock-screen.html') Lock screen
+        li
+          a(href='profile.html') Profile
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse16', aria-expanded='false', aria-controls='collapse16')
+        i.ti-panel
+        |  Apps
+      ul#collapse16.list-unstyled.collapse
+        li
+          a(href='mailbox.html') Mailbox
+        li
+          a(href='calendar.html') Calendar
+        li
+          a(href='image-cropper.html') Image cropper
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse17', aria-expanded='false', aria-controls='collapse17')
+        i.ti-blackboard
+        |  Extra pages
+      ul#collapse17.list-unstyled.collapse
+        li
+          a(href='invoice.html') Invoice
+        li
+          a(href='search-results.html') Search results
+        li
+          a(href='blank-template.html') Blank template
+    li.header Help
+    li
+      a(href='documentation.html')
+        i.ti-help-alt
+        |  Documentation
+    li.header Menu Levels
+    li.panel
+      a.collapsed(role='button', data-toggle='collapse', data-parent='.navigation', href='#collapse18', aria-expanded='false', aria-controls='collapse18')
+        i.ti-folder
+        |  Menu levels
+      ul#collapse18.list-unstyled.collapse
+        li
+          a(href='#') Menu level 2.1
+        li.panel
+          a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse18', href='#collapse21', aria-expanded='false', aria-controls='collapse21') Menu level 2.2
+          ul#collapse21.list-unstyled.collapse
+            li
+              a(href='#') Menu level 3.1
+            li.panel
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse21', href='#collapse31', aria-expanded='false', aria-controls='collapse31') Menu level 3.2
+              ul#collapse31.list-unstyled.collapse
+                li
+                  a(href='#') Menu level 4.1
+                li.panel
+                  a.collapsed(role='button', data-toggle='collapse', data-parent='#collapse31', href='#collapse41', aria-expanded='false', aria-controls='collapse41') Menu level 4.2
+                  ul#collapse41.list-unstyled.collapse
+                    li
+                      a(href='#') Menu level 5.1
+                    li
+                      a(href='#') Menu level 5.2
+block page-header
+  | Welcome to Umega
+block breadcrumb
+  p.text-muted.mb-0 Responsive Web App Kit
+block main-content
+  .main-content.container-fluid
+    .row
+      .col-lg-9
+        #world-map.mb-30(style='height: 495px')
+      .col-lg-3
+        .row
+          .col-lg-12.col-md-4
+            .mb-30
+              .media
+                .media-body
+                  h5.media-heading New Orders 
+                    span.text-success
+                      i.ti-arrow-up.fs-13
+                      |  5.28%
+                  .fs-36.fw-600.counter 650
+                .media-right
+                  i.fs-30.ti-receipt
+              #flot-order(style='height: 74px')
+          .col-lg-12.col-md-4
+            .mb-30
+              .media
+                .media-body
+                  h5.media-heading Total Revenue 
+                    span.text-danger
+                      i.ti-arrow-down.fs-13
+                      |  1.06%
+                  .fs-36.fw-600 $
+                    span.counter 20,320
+                .media-right
+                  i.fs-30.ti-money
+              #flot-revenue(style='height: 74px')
+          .col-lg-12.col-md-4
+            .mb-30
+              .media
+                .media-body
+                  h5.media-heading Task Completed 
+                    span.text-danger
+                      i.ti-arrow-down.fs-13
+                      |  3.76%
+                  .fs-36.fw-600.counter 278
+                .media-right
+                  i.fs-30.ti-check-box
+              ul.list-unstyled
+                li
+                  .block.clearfix.mb-5
+                    span.pull-left.fs-12 Today
+                    span.pull-right.label.label-outline.label-warning 65%
+                  .progress.progress-xs
+                    .progress-bar.progress-bar-warning(role='progressbar', data-transitiongoal='65')
+                li
+                  .block.clearfix.mb-5
+                    span.pull-left.fs-12 Yesterday
+                    span.pull-right.label.label-outline.label-danger 80%
+                  .progress.progress-xs
+                    .progress-bar.progress-bar-danger(role='progressbar', data-transitiongoal='80')
+    .row
+      .col-lg-12
+        .widget.clear
+          .widget-heading.clearfix
+            h3.widget-title.pull-left Site Traffic
+            ul.widget-tools.pull-right.list-inline
+              li
+                a.widget-collapse(href='javascript:;')
+                  i.ti-angle-up
+              li
+                a.widget-reload(href='javascript:;')
+                  i.ti-reload
+              li
+                a.widget-remove(href='javascript:;')
+                  i.ti-close
+          .widget-body
+            .row
+              .col-md-8
+                .clearfix
+                  #flot-visitor-legend.pull-left
+                  .pull-right
+                    .btn-toolbar
+                      button#daterangepicker.btn.btn-raised.btn-black(type='button')
+                        i.ti-calendar 
+                        span
+                #flot-visitor(style='height: 300px')
+                .row.row-0.mt-10.text-center
+                  .col-xs-4
+                    .fs-30.fw-600 45.87M
+                    h5.m-0 Overall Visitors 
+                      span.text-danger
+                        i.ti-arrow-down.fs-13
+                        |  2.43%
+                  .col-xs-4
+                    .fs-30.fw-600 15:32
+                    h5.m-0 Avg. Visit Duration 
+                      span.text-success
+                        i.ti-arrow-up.fs-13
+                        |  12.54%
+                  .col-xs-4
+                    .fs-30.fw-600 115.65
+                    h5.m-0 Pages/Visit 
+                      span.text-success
+                        i.ti-arrow-up.fs-13
+                        |  5.62%
+              .col-md-4
+                #morris-browser(style='height: 224px')
+                .table-responsive
+                  table.table.table-hover.mb-0
+                    thead
+                      tr
+                        th(style='width:10%') #
+                        th(style='width:40%') Browser
+                        th(style='width:25%') Sessions
+                        th(style='width:25%') Up/Down
+                    tbody
+                      tr
+                        td 1
+                        td Chrome
+                        td 4325
+                        td.text-success +3.26% 
+                      tr
+                        td 2
+                        td Firefox
+                        td 3257
+                        td.text-danger -2.14% 
+                      tr
+                        td 3
+                        td IE
+                        td 2314
+                        td.text-success +2.92% 
+    .row
+      .col-md-3.col-sm-6
+        .widget.text-center
+          .widget-body
+            .clearfix
+              .pull-left
+                a.widget-reload(href='javascript:;')
+                  i.ti-control-record.text-muted
+              .pull-right
+                a.widget-remove(href='javascript:;')
+                  i.ti-trash.text-muted
+            h5.mb-5 New Comments
+            .fs-36.fw-600.mb-20.counter 1,206
+            #esp-comment.easy-pie-chart.fs-36(data-percent='75', style='height: 140px; width: 140px; line-height: 120px; padding: 10px;')
+              i.ti-comment-alt.text-muted
+            .clearfix.mt-20
+              .pull-left
+                .fs-12 Today
+                .text-success +2.43%
+              .pull-right
+                .fs-12 Yesterday
+                .text-danger -1.02%
+      .col-md-3.col-sm-6
+        .widget.text-center
+          .widget-body
+            .clearfix
+              .pull-left
+                a.widget-reload(href='javascript:;')
+                  i.ti-control-record.text-muted
+              .pull-right
+                a.widget-remove(href='javascript:;')
+                  i.ti-trash.text-muted
+            h5.mb-5 New Photos
+            .fs-36.fw-600.mb-20.counter 350
+            #esp-photo.easy-pie-chart.fs-36(data-percent='55', style='height: 140px; width: 140px; line-height: 120px; padding: 10px;')
+              i.ti-image.text-muted
+            .clearfix.mt-20
+              .pull-left
+                .fs-12 Today
+                .text-danger -0.23%
+              .pull-right
+                .fs-12 Yesterday
+                .text-success +1.02%
+      .col-md-3.col-sm-6
+        .widget.text-center
+          .widget-body
+            .clearfix
+              .pull-left
+                a.widget-reload(href='javascript:;')
+                  i.ti-control-record.text-muted
+              .pull-right
+                a.widget-remove(href='javascript:;')
+                  i.ti-trash.text-muted
+            h5.mb-5 New Users
+            .fs-36.fw-600.mb-20.counter 890
+            #esp-user.easy-pie-chart.fs-36(data-percent='30', style='height: 140px; width: 140px; line-height: 120px; padding: 10px;')
+              i.ti-user.text-muted
+            .clearfix.mt-20
+              .pull-left
+                .fs-12 Today
+                .text-success +0.09%
+              .pull-right
+                .fs-12 Yesterday
+                .text-danger -0.02%
+      .col-md-3.col-sm-6
+        .widget.text-center
+          .widget-body
+            .clearfix
+              .pull-left
+                a.widget-reload(href='javascript:;')
+                  i.ti-control-record.text-muted
+              .pull-right
+                a.widget-remove(href='javascript:;')
+                  i.ti-trash.text-muted
+            h5.mb-5 New Feedbacks
+            .fs-36.fw-600.mb-20.counter 1,609
+            #esp-feedback.easy-pie-chart.fs-36(data-percent='20', style='height: 140px; width: 140px; line-height: 120px; padding: 10px;')
+              i.ti-receipt.text-muted
+            .clearfix.mt-20
+              .pull-left
+                .fs-12 Today
+                .text-success +3.29%
+              .pull-right
+                .fs-12 Yesterday
+                .text-success +2.32%
+    .row
+      .col-md-4
+        .widget.no-border
+          .overlay.bg-black(style='height: 200px')
+            img.img-main.img-responsive(src=build+'images/backgrounds/01.jpg', alt='')
+            a(href='javascript:void(0)', style='position: absolute; top: 50%; left: 50%; margin-top: -50px; margin-left: -50px; display: inline-block; border-radius: 50%; padding: 3px; background-color: #fff;')
+              img.img-circle(src=build+'images/users/06.jpg', width='100', alt='')
+          .text-center.p-20.bd-l.bd-r
+            h4.mt-0.mb-5.text-warning Steven Cook
+            p Cretive Director
+            p.text-muted.mb-0 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          .row.row-0.p-15.text-center.bg-black
+            .col-xs-4
+              .fs-20.fw-500 208
+              .text-muted Following
+            .col-xs-4
+              .fs-20.fw-500 560
+              .text-muted Likes
+            .col-xs-4
+              .fs-20.fw-500 95
+              .text-muted Photos
+      .col-md-8
+        .widget.no-border
+          table#order-table.table.table-hover.mb-0.dt-responsive.nowrap(cellspacing='0', width='100%')
+            thead
+              tr
+                th(style='width:16%') Order ID
+                th(style='width:37%') Customer
+                th(style='width:20%') Date Added
+                th(style='width:12%') Total
+                th(style='width:15%') Completed
+            tbody
+              tr
+                td #6546
+                td
+                  .media
+                    .media-left.avatar
+                      img.media-object.img-circle(src=build+'images/users/10.jpg', alt='')
+                      span.status.bg-success
+                    .media-body
+                      h5.media-heading Philip Fernandez
+                      p.text-muted.mb-0 489 Rhapsody Street
+                td 20 Feb 2016
+                td $140.00
+                td.text-center.text-success
+                  i.ti-check
+              tr
+                td #6941
+                td
+                  .media
+                    .media-left.avatar
+                      img.media-object.img-circle(src=build+'images/users/20.jpg', alt='')
+                      span.status.bg-success
+                    .media-body
+                      h5.media-heading Mary Carr
+                      p.text-muted.mb-0 3611 West Fork Drive
+                td 20 Feb 2016
+                td $120.00
+                td.text-center.text-danger
+                  i.ti-close
+              tr
+                td #3202
+                td
+                  .media
+                    .media-left.avatar
+                      img.media-object.img-circle(src=build+'images/users/11.jpg', alt='')
+                      span.status.bg-danger
+                    .media-body
+                      h5.media-heading Joseph Salazar
+                      p.text-muted.mb-0 4489 Hart Ridge Road
+                td 20 Feb 2016
+                td $590.00
+                td.text-center.text-success
+                  i.ti-check
+              tr
+                td #8302
+                td
+                  .media
+                    .media-left.avatar
+                      img.media-object.img-circle(src=build+'images/users/06.jpg', alt='')
+                      span.status.bg-warning
+                    .media-body
+                      h5.media-heading John Cruz
+                      p.text-muted.mb-0 3274 Lyndon Street
+                td 20 Feb 2016
+                td $940.00
+                td.text-center.text-danger
+                  i.ti-close
+              tr
+                td #8943
+                td
+                  .media
+                    .media-left.avatar
+                      img.media-object.img-circle(src=build+'images/users/19.jpg', alt='')
+                      span.status.bg-success
+                    .media-body
+                      h5.media-heading Jacqueline Rios
+                      p.text-muted.mb-0 559 Holly Street
+                td 20 Feb 2016
+                td $490.00
+                td.text-center.text-success
+                  i.ti-check
+              tr
+                td #8943
+                td
+                  .media
+                    .media-left.avatar
+                      img.media-object.img-circle(src=build+'images/users/01.jpg', alt='')
+                      span.status.bg-success
+                    .media-body
+                      h5.media-heading Samuel Hayes
+                      p.text-muted.mb-0 716 Riverwood Drive
+                td 20 Feb 2016
+                td $230.00
+                td.text-center.text-success
+                  i.ti-check
+              tr
+                td #2357
+                td
+                  .media
+                    .media-left.avatar
+                      img.media-object.img-circle(src=build+'images/users/15.jpg', alt='')
+                      span.status.bg-success
+                    .media-body
+                      h5.media-heading Tyler Hamilton
+                      p.text-muted.mb-0 1979 Monroe Street
+                td 20 Feb 2016
+                td $319.00
+                td.text-center.text-success
+                  i.ti-check
+              tr
+                td #5784
+                td
+                  .media
+                    .media-left.avatar
+                      img.media-object.img-circle(src=build+'images/users/16.jpg', alt='')
+                      span.status.bg-success
+                    .media-body
+                      h5.media-heading Lawrence Castillo
+                      p.text-muted.mb-0 1704 Saints Alley
+                td 20 Feb 2016
+                td $860.00
+                td.text-center.text-success
+                  i.ti-check
+    .row
+      .col-md-6
+        .widget.no-border
+          .p-30.overlay.bg-black
+            img.img-main.img-responsive(src=build+'images/backgrounds/06.jpg', alt='')
+            .clearfix
+              .pull-left
+                i.fs-60.wi.wi-day-cloudy-gusts
+                h3 Mostly Cloudy
+                h4.fw-400 New York
+              .pull-right.text-right
+                .fs-20 January 30, 2016
+                .fs-100.fw-700
+                  span.counter 76
+                  sup(style='top: 0') o
+            #flot-weather(style='height: 100px')
+            .row.row-0.text-center
+              .col-sm-2.col-xs-4.mt-10
+                .fs-18.fw-500 77
+                  sup o
+                .fs-12 6 AM
+              .col-sm-2.col-xs-4.mt-10
+                .fs-18.fw-500 62
+                  sup o
+                .fs-12 10 AM
+              .col-sm-2.col-xs-4.mt-10
+                .fs-18.fw-500 74
+                  sup o
+                .fs-12 2 PM
+              .col-sm-2.col-xs-4.mt-10
+                .fs-18.fw-500 76
+                  sup o
+                .fs-12 6 PM
+              .col-sm-2.col-xs-4.mt-10
+                .fs-18.fw-500 78
+                  sup o
+                .fs-12 10 PM
+              .col-sm-2.col-xs-4.mt-10
+                .fs-18.fw-500 60
+                  sup o
+                .fs-12 2 AM
+      .col-md-6
+        .widget.no-border
+          ul.activities.list-unstyled.mb-0
+            li.activity-info
+              .media
+                .media-left
+                  time.fs-30.fw-500(datetime='2015-12-10T20:50:48+07:00') 08:20
+                    span.fs-14.text-muted PM
+                .media-body
+                  h5.media-heading Added
+                  p.text-muted Morris charts page
+            li.activity-danger
+              .media
+                .media-left
+                  time.fs-30.fw-500(datetime='2015-12-10T20:50:48+07:00') 07:30
+                    span.fs-14.text-muted PM
+                .media-body
+                  h5.media-heading Fixed
+                  p.text-muted White header version & example pages
+            li.activity-warning
+              .media
+                .media-left
+                  time.fs-30.fw-500(datetime='2015-12-10T20:50:48+07:00') 03:15
+                    span.fs-14.text-muted PM
+                .media-body
+                  h5.media-heading Updated
+                  p.text-muted Visual composer 4.92 
+            li.activity-success
+              .media
+                .media-left
+                  time.fs-30.fw-500(datetime='2015-12-10T20:50:48+07:00') 10:50
+                    span.fs-14.text-muted AM
+                .media-body
+                  h5.media-heading Create workflow
+                  p.text-muted Team member
+                  ul.list-inline
+                    li
+                      .avatar
+                        img.media-object.img-circle(src=build+'images/users/02.jpg', alt='')
+                        span.status.bg-success
+                    li
+                      .avatar
+                        img.media-object.img-circle(src=build+'images/users/03.jpg', alt='')
+                        span.status.bg-warning
+                    li
+                      .avatar
+                        img.media-object.img-circle(src=build+'images/users/07.jpg', alt='')
+                        span.status.bg-danger
+                    li
+                      .avatar
+                        img.media-object.img-circle(src=build+'images/users/05.jpg', alt='')
+                        span.status.bg-success
+                    li
+                      .avatar
+                        img.media-object.img-circle(src=build+'images/users/06.jpg', alt='')
+                        span.status.bg-danger
+            li.activity-primary
+              .media
+                .media-left
+                  time.fs-30.fw-500(datetime='2015-12-10T20:50:48+07:00') 09:20
+                    span.fs-14.text-muted AM
+                .media-body
+                  h5.media-heading Fixed
+                  p.text-muted Performance improvement
+    .row
+      .col-lg-12
+        .widget.clear
+          .widget-heading.clearfix
+            h3.widget-title.pull-left Upcoming Events
+            ul.widget-tools.pull-right.list-inline
+              li
+                a.widget-collapse(href='javascript:;')
+                  i.ti-angle-up
+              li
+                a.widget-reload(href='javascript:;')
+                  i.ti-reload
+              li
+                a.widget-remove(href='javascript:;')
+                  i.ti-close
+          .widget-body
+            .row.row-0.bg-warning
+              .col-md-3
+                .events-header
+                  i.ti-move
+                  |  Draggable Events
+                .p-20
+                  ul.list-unstyled.draggable
+                    li Start with design project
+                    li Lunch with family
+                    li Birthday party
+                    li Read a book
+                    li Drink with Jessica
+                    li Pay internet bills online
+                    li Search for a job
+                    li Meeting with dropbox
+                  .checkbox-custom
+                    input#drop-remove(type='checkbox', value='remove', checked='')
+                    label(for='drop-remove') Remove after drop
+              .col-md-9
+                #fullcalendar
+            #addNewEvent.modal.fade(tabindex='-1', role='dialog', aria-labelledby='ModalEventLabel')
+              .modal-dialog
+                .modal-content
+                  .modal-header.bg-black
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                      span(aria-hidden='true') ×
+                    h4#ModalEventLabel.modal-title Add New Event
+                  .modal-body
+                    form
+                      .form-group
+                        input#inputTitleEvent.form-control(type='text', placeholder='Event Name')
+                      .form-group
+                        input#inputBackgroundEvent.form-control(type='text', value='#34495e')
+                      input#start(type='hidden')
+                      input#end(type='hidden')
+                      input#allDay(type='hidden')
+                  .modal-footer
+                    button.btn.btn-raised.btn-default(type='button', data-dismiss='modal') Cancel
+                    button#btnAddNewEvent.btn.btn-raised.btn-black(type='submit') Save

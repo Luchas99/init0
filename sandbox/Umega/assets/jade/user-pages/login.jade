@@ -1,0 +1,44 @@
+extends ../template/extra-template.jade
+block title
+  title Umega App - Login
+block main-content
+  body.user-page
+    h1.fw-600.mt-0.mb-20 Umega App
+    form.form-horizontal(method='get', action='index.html')
+      .form-group.has-feedback
+        .col-xs-12
+          input.form-control.rounded(type='text', aria-describedby='exampleInputEmail', placeholder='Email')
+          span.ti-user.form-control-feedback(aria-hidden='true')
+          span#exampleInputEmail.sr-only (default)
+      .form-group.has-feedback
+        .col-xs-12
+          input.form-control.rounded(type='password', aria-describedby='exampleInputPassword', placeholder='Password')
+          span.ti-key.form-control-feedback(aria-hidden='true')
+          span#exampleInputPassword.sr-only (default)
+      .form-group
+        .col-xs-12
+          .pull-left
+            label.checkbox-inline.checkbox-custom
+              input#exampleCheckboxRemember(type='checkbox', value='remember')
+              label(for='exampleCheckboxRemember') Remember me
+          .pull-right
+            a.inline-block.form-control-static(href='javascript:;') Forgot a Passowrd?
+      button.btn.btn-lg.btn-success.btn-raised.btn-block(type='submit') Sign In
+    hr
+    p.text-muted Sign In with your Facebook Or Twitter accounts
+    .clearfix
+      .pull-left
+        button.btn.btn-raised.btn-primary(type='button')
+          i.ti-facebook.mr-5
+          |  Facebook
+      .pull-right
+        button.btn.btn-raised.btn-info(type='button')
+          i.ti-twitter-alt.mr-5
+          |  Twitter
+    hr
+    .form-horizontal
+      .clearfix
+        .pull-left
+          p.form-control-static Want new account?
+        .pull-right
+          a.btn.btn-outline.btn-default(href='register.html') Sign Up
